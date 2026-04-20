@@ -115,10 +115,18 @@ We strictly enforce an audit on tone, decision biases, and rhetoric. If the Lega
 
 | Date | Event |
 |------|-------|
+| 2025-11 | **ChronicleCore concept** — conceptual exploration begins |
+| 2025-12 | Informal multi-role prompt experiments in private development |
+| 2026-01-16 | **First multi-expert team** formalized ([pre-a1 archive](snapshots/pre-a1/v0.1-2026-01-16/)) |
+| 2026-01-18 | V9.2 specification — last pre-A1 form ([pre-a1 archive](snapshots/pre-a1/v0.9.2-2026-01-18/)) |
+| 2026-01-20 | Phase 1 system reset — **A1 rebuild begins** |
+| 2026-01-21 | **Antigravity: Skills Chronicle v1.0.0** — first A1-era product launched ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
+| 2026-01-23 | A1 v1.0 launched — **Chief of Staff (幕僚長)** and **Cardinal (樞機師)** born |
 | 2026-02-22 | **ChronicleCore-Architecture v1.0** — This whitepaper published ([snapshot](snapshots/)) |
 | 2026-04 | A1 Expert System migrates to next-gen architecture (Chronicle-Ark) |
-| 2026-01-21 | **Antigravity: Skills Chronicle v1.0.0** — first product built by the A1 Expert System ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
 | 2026-04-20 | Antigravity MIT open-sourced — 4,330+ downloads archived |
+
+> 📜 **Historical evidence** of the pre-A1 phases is preserved in [`snapshots/pre-a1/`](snapshots/pre-a1/), with full source mapping to the originating commits.
 
 ### Antigravity: Skills Chronicle — Proof of Concept
 
