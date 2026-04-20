@@ -106,8 +106,39 @@ AI's greatest flaw is amnesia. ChronicleCore uses a dual-track memory system:
 *   `diary.md`: A continuous scratchpad for infinite reasoning.
 *   `preferences.md`: High-weight, crystallized persona rules. When the log grows too long, the system refines critical decisions into permanent preferences. They never degrade into forgetful interns.
 
-### Personality Uniqueness Check
+### Personality Uniqueness Check (Design-Time)
 We strictly enforce an audit on tone, decision biases, and rhetoric. If the Legal Agent sounds exactly like the Marketing Agent, the system recognizes a "Persona Reskin" and purges the redundant node.
+
+### Personality Variance Audit (Run-Time)
+Continuous monitoring of cross-agent epistemic and rhetorical convergence. Even agents with distinct initial designs can drift toward indistinguishable outputs over prolonged operation. The Variance Audit detects this convergence and triggers identity recalibration before Social Affordance signals degrade.
+
+---
+
+## The A1 Expert Roster
+
+The system currently operates **38 active Human-in-the-Loop expert agents**, organized under the 5 Pillars:
+
+| Pillar | Agents | Examples |
+|--------|--------|---------|
+| 👑 The Core | 3 | 幕僚長 (Chief of Staff), 樞機師 (Architect), 星探 (People Officer) |
+| 🛡️ The Shield | 3 | 真理 (Inquisitor), 破壁者 (Security Auditor), 魔心師 |
+| 🔨 The Hands | 12 | 織法者 (Frontend), 守門人 (Database), 機械師 (DevOps), ... |
+| 🎭 The Soul | 6 | 光影師 (Visual), 操偶師 (Interaction), 幻畫師 (Illustration), ... |
+| 👁️ The Senses | 14 | 天機星 (Intelligence), 賢者 (Scientist), 戰略家 (Strategist), ... |
+
+**Full roster with capabilities**: [`architecture/ROSTER.md`](architecture/ROSTER.md)
+
+**Flagship case study — The Inquisitor**: [`architecture/examples/inquisitor/`](architecture/examples/inquisitor/)
+
+---
+
+## Academic Reference
+
+This architecture is referenced in:
+
+> Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science.
+
+The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposing that agent identity design functions as a collaboration interface — structuring how users perceive, approach, and engage with each agent. ChronicleCore operates at **Tier 3 (Structured Identity Enforcement)** of the ASAF Identity Signal Fidelity Spectrum, where Social Affordances are structurally enforced through persistent identity modules.
 
 ---
 
