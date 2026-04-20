@@ -140,6 +140,10 @@ This architecture is referenced in:
 
 The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposing that agent identity design functions as a collaboration interface — structuring how users perceive, approach, and engage with each agent. ChronicleCore operates at **Tier 3 (Structured Identity Enforcement)** of the ASAF Identity Signal Fidelity Spectrum, where Social Affordances are structurally enforced through persistent identity modules.
 
+### Public Articles
+- [How I Architect AI Agents: From Tools to a Governable Digital Enterprise](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) (2026-02-25) — 5-Pillar governance framework introduction
+- [Chronicle-Ark: The Exodus from Platform Limits to Sovereign Infrastructure](https://www.linkedin.com/pulse/chronicle-ark-exodus-from-platform-limits-sovereign-bilingual-lee-7xfbc) (2026-03-19) — Migration story from hosted platforms to self-built Agent IDE
+
 ---
 
 ## Timeline
@@ -154,7 +158,9 @@ The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposi
 | 2026-01-21 | **Antigravity: Skills Chronicle v1.0.0** — first A1-era product launched ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
 | 2026-01-23 | A1 v1.0 launched — **Chief of Staff (幕僚長)** and **Cardinal (樞機師)** born |
 | 2026-02-22 | **ChronicleCore-Architecture v1.0** — This whitepaper published ([snapshot](snapshots/)) |
-| 2026-04 | A1 Expert System migrates to next-gen architecture (Chronicle-Ark) |
+| 2026-02-25 | LinkedIn article: [How I Architect AI Agents](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) — public introduction of the 5-Pillar governance framework |
+| 2026-03-19 | LinkedIn article: [Chronicle-Ark: The Exodus](https://www.linkedin.com/pulse/chronicle-ark-exodus-from-platform-limits-sovereign-bilingual-lee-7xfbc) — migration from platform-hosted to sovereign infrastructure |
+| 2026-04 | **Chronicle-Ark** operational — self-built multi-engine Agent IDE with MCP as first-class citizen |
 | 2026-04-20 | Antigravity MIT open-sourced — 4,330+ downloads archived |
 
 > 📜 **Historical evidence** of the pre-A1 phases is preserved in [`snapshots/pre-a1/`](snapshots/pre-a1/), with full source mapping to the originating commits.
