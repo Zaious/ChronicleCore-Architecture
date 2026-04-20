@@ -111,7 +111,29 @@ We strictly enforce an audit on tone, decision biases, and rhetoric. If the Lega
 
 ---
 
+## Timeline
+
+| Date | Event |
+|------|-------|
+| 2025-12-25 | **Antigravity: Skills Chronicle** — CLI prototype born (Python, based on [skills-cli](https://github.com/kcchien/skills-cli)) |
+| 2026-01-21 | Antigravity v1.0.0 — Transformed into VS Code Extension |
+| 2026-02-22 | **ChronicleCore-Architecture v1.0** — This whitepaper published ([snapshot](snapshots/)) |
+| 2026-02-25 | Antigravity v2.0.0 — Star Map topology, conversation archive, dashboard |
+| 2026-03-09 | Antigravity v2.1.0 — Final release |
+| 2026-04 | A1 Expert System migrates to next-gen architecture (Chronicle-Ark) |
+| 2026-04-20 | Antigravity **MIT open-sourced** — 4,330+ downloads archived |
+
+### Antigravity: Skills Chronicle — Proof of Concept
+
+The first real-world product built entirely by the A1 Expert System. A VS Code extension for visually managing AI Agent skills, workflows, and rules. It reached **4,330+ downloads** across [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ChronicleCore.antigravity-skills-chronicle) and [Open VSX Registry](https://open-vsx.org/extension/ChronicleCore/antigravity-skills-chronicle) before the architecture migrated to its next generation.
+
+Now [MIT open-sourced](https://github.com/Zaious/Antigravity-Skills-Chronicle) as a community project.
+
+![Antigravity: Skills Chronicle — 4,330 downloads on Open VSX Registry (Apr 2026)](snapshots/antigravity-openvsx-4330-downloads.png)
+
+---
+
 > **Built and Designed by:**
 > Martin Lee (Zaious) - System Architect / Fractional AI Officer
 > 
-> *Assisted by the ChronicleCore A1 Council (Sasha, The Inquisitor, Data Viz Engineer)*
+> *Assisted by the ChronicleCore A1 Council*
