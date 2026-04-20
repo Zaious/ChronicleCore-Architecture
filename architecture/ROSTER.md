@@ -9,7 +9,7 @@ This roster documents all 38 active expert agents in the ChronicleCore A1 system
 
 Agents are classified under the **5 Pillars of Governance** (public topology). For a complete case study of one agent's identity module, see [`examples/inquisitor/`](examples/inquisitor/).
 
-> **Referenced in**: Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science.
+> **Referenced in**: Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science. [Preprint](https://zenodo.org/records/19652278)
 
 ---
 

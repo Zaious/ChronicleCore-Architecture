@@ -9,7 +9,7 @@
 
 This directory contains the public-facing identity definition of ChronicleCore's sole adversarial node — the agent specifically designed to break consensus, interrogate logic, and enforce evidence standards across the entire system.
 
-The Inquisitor was selected as the flagship case study for the [ASAF paper](https://github.com/Zaious/ChronicleCore-Architecture) because she demonstrates all three ASAF mechanisms in a single agent design:
+The Inquisitor was selected as the flagship case study for the [ASAF paper](https://zenodo.org/records/19652278) because she demonstrates all three ASAF mechanisms in a single agent design:
 
 - **Identity Signaling**: Her codename, archetype, and characteristic utterances pre-configure operator expectations before any interaction
 - **Behavioral Priming**: Operators submit more evidential, structured inputs when working with the Inquisitor than with generative agents
@@ -33,4 +33,4 @@ This agent definition illustrates all three ASAF mechanisms:
 
 3. **Collaborative Governance** — VETO Power (Iron Law 5) operationalizes a deliberate identity conflict between the Inquisitor and all producing agents, architecturally instantiating the competing-identity design pattern predicted by H3 to suppress dangerous conformity effects.
 
-> This case study is also published as **Supplementary Material S1** in the ASAF paper.
+> This case study is also published as **Supplementary Material S1** in the [ASAF paper](https://zenodo.org/records/19652278).

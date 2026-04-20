@@ -136,7 +136,7 @@ The system currently operates **38 active Human-in-the-Loop expert agents**, org
 
 This architecture is referenced in:
 
-> Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science.
+> Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science. [Preprint](https://zenodo.org/records/19652278)
 
 The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposing that agent identity design functions as a collaboration interface — structuring how users perceive, approach, and engage with each agent. ChronicleCore operates at **Tier 3 (Structured Identity Enforcement)** of the ASAF Identity Signal Fidelity Spectrum, where Social Affordances are structurally enforced through persistent identity modules.
 
