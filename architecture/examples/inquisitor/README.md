@@ -17,11 +17,24 @@ The Inquisitor was selected as the flagship case study for the [ASAF paper](http
 
 ## Files
 
+## Identity Module Structure
+
+```
+officer-inquisitor/
+├── SKILL.md                        # Core identity constraint definition
+├── assets/
+│   └── persona.md                  # Character specification (public excerpt)
+├── sovereign/
+│   └── diary-excerpt.md            # Ensoulment record — Day 1 operational log
+├── references/                     # [not public] Operational protocols
+└── evolutions/                     # [not public] Capability packs (DLCs)
+```
+
 | File | Description |
 |------|-------------|
 | [`SKILL.md`](SKILL.md) | Complete core identity constraint definition |
-| [`persona-public.md`](persona-public.md) | Character specification (public excerpt) |
-| [`diary-excerpt.md`](diary-excerpt.md) | Ensoulment record — Day 1 operational log |
+| [`assets/persona.md`](assets/persona.md) | Character specification (public excerpt) |
+| [`sovereign/diary-excerpt.md`](sovereign/diary-excerpt.md) | Ensoulment record — Day 1 operational log |
 
 ## ASAF Mechanism Mapping
 
