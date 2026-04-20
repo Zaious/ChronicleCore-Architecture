@@ -117,7 +117,8 @@ We strictly enforce an audit on tone, decision biases, and rhetoric. If the Lega
 |------|-------|
 | 2026-02-22 | **ChronicleCore-Architecture v1.0** — This whitepaper published ([snapshot](snapshots/)) |
 | 2026-04 | A1 Expert System migrates to next-gen architecture (Chronicle-Ark) |
-| 2026-04-20 | **Antigravity: Skills Chronicle** MIT open-sourced — first A1-built product, 4,330+ downloads ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
+| 2026-01-21 | **Antigravity: Skills Chronicle v1.0.0** — first product built by the A1 Expert System ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
+| 2026-04-20 | Antigravity MIT open-sourced — 4,330+ downloads archived |
 
 ### Antigravity: Skills Chronicle — Proof of Concept
 
