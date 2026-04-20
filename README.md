@@ -115,13 +115,9 @@ We strictly enforce an audit on tone, decision biases, and rhetoric. If the Lega
 
 | Date | Event |
 |------|-------|
-| 2025-12-25 | **Antigravity: Skills Chronicle** — CLI prototype born (Python, based on [skills-cli](https://github.com/kcchien/skills-cli)) |
-| 2026-01-21 | Antigravity v1.0.0 — Transformed into VS Code Extension |
 | 2026-02-22 | **ChronicleCore-Architecture v1.0** — This whitepaper published ([snapshot](snapshots/)) |
-| 2026-02-25 | Antigravity v2.0.0 — Star Map topology, conversation archive, dashboard |
-| 2026-03-09 | Antigravity v2.1.0 — Final release |
 | 2026-04 | A1 Expert System migrates to next-gen architecture (Chronicle-Ark) |
-| 2026-04-20 | Antigravity **MIT open-sourced** — 4,330+ downloads archived |
+| 2026-04-20 | **Antigravity: Skills Chronicle** MIT open-sourced — first A1-built product, 4,330+ downloads ([repo](https://github.com/Zaious/Antigravity-Skills-Chronicle)) |
 
 ### Antigravity: Skills Chronicle — Proof of Concept
 
