@@ -20,6 +20,8 @@ This pre-formalization phase predates git version control for this project.
 - No formal structure, no version control
 - **No surviving artifacts** — evidence relies on author's recall
 
+The design philosophy drew partial inspiration from the *Danganronpa* game series — each expert was conceived as an "Ultimate" (超高校級) specialist in their domain, and the adversarial audit mechanism was named "Machine Gun Debate" (マシンガントークバトル) after the game's signature confrontation system.
+
 ### Phase 1 — First Formalization (2026-01-15 ~ 2026-01-19)
 - Multi-expert prototype formalized into a structured framework
 - First expert team defined (Jan 16) — see [`v0.1-2026-01-16/`](v0.1-2026-01-16/)

@@ -8,7 +8,7 @@ Detailed architectural documents and artifacts for the ChronicleCore A1 Expert S
 |------|-------------|
 | [`TOPOLOGY.md`](TOPOLOGY.md) | Mermaid topology diagram — 5 Pillars governance structure |
 | [`ROSTER.md`](ROSTER.md) | Full 38-agent roster with codenames, titles, ensoulment dates, and capabilities |
-| [`examples/inquisitor/`](examples/inquisitor/) | Flagship case study — complete identity module of the Inquisitor (真理), the system's sole adversarial node |
+| [`examples/inquisitor/`](examples/inquisitor/) | Flagship case study — complete identity module of the Inquisitor (真理), as published in [ASAF paper S1](https://zenodo.org/records/19652278) |
 
 ## Identity Module Pattern
 

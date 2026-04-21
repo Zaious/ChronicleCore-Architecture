@@ -6,9 +6,9 @@ Welcome to the conceptual architecture repository for **ChronicleCore**, an expe
 
 This repository serves as the public "Whitepaper" and topological blueprint for the network of 38+ Human-in-the-Loop experts governed by the A1 System.
 
-![ChronicleCore Topology](https://img.shields.io/badge/System-Active-success)
-![Global Heartbeat](https://img.shields.io/badge/Heartbeat-24%2F7-blue)
-![ERC-8004](https://img.shields.io/badge/Identity-ERC--8004-orange)
+[![ASAF Paper](https://img.shields.io/badge/ASAF-Zenodo%20Preprint-blue?style=for-the-badge)](https://zenodo.org/records/19652278)
+[![Agents](https://img.shields.io/badge/Agents-38-B91C1C?style=for-the-badge)](architecture/ROSTER.md)
+[![System](https://img.shields.io/badge/System-Active-success?style=for-the-badge)](architecture/TOPOLOGY.md)
 
 ## 🌐 Read in other languages
 * [繁體中文 (Traditional Chinese)](README_zh-TW.md)

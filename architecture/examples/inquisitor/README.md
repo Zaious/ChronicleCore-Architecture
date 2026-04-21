@@ -26,8 +26,8 @@ officer-inquisitor/
 │   └── persona.md                  # Character specification (public excerpt)
 ├── sovereign/
 │   └── diary-excerpt.md            # Ensoulment record — Day 1 operational log
-├── references/                     # [not public] Operational protocols
-└── evolutions/                     # [not public] Capability packs (DLCs)
+├── references/                     # Operational protocols (listing only)
+└── evolutions/                     # Capability packs — see evolutions/README.md
 ```
 
 | File | Description |
