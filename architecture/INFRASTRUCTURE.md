@@ -99,6 +99,7 @@ graph TB
     SANCTUM -- "Bark push" --> CONSUL
     WATCHDOG -- "Bark push (independent path)" --> CONSUL
     FORGE -- "remote builds over SSH" --> STUDIO
+    CONSUL -. "iOS device testing" .-> FORGE
     PUBLIC -- "HTTPS" --> OUTPOST
     OUTPOST -. "✖ public services barred from the tailnet" .-> SANCTUM
 ```
@@ -109,7 +110,7 @@ graph TB
 | **Forge** | Workstation, local GPU compute, the Ark | Intel Core i5-12400 (6C/12T) · 64 GB DDR5-4800 · **2× RTX 3090 24 GB** · 1 TB NVMe + 3× 2 TB HDD | Windows 11 Pro + WSL2 / Docker | Always on |
 | **Outpost** | The only public-facing node | Cloud KVM: 4 vCPU AMD EPYC · 8 GB · 72 GB | Ubuntu 24.04.4 LTS (kernel 6.8) | 24×7 |
 | **Watchdog** | Monitoring, off-machine backup | Retired laptop: Intel Core i5-8265U (4C/8T) · 8 GB · 512 GB NVMe · battery as UPS | Ubuntu 24.04.4 LTS (kernel 6.17) | 24×7 |
-| **Consul** | Notification terminal, mobile control window | iPhone | iOS | Carried |
+| **Consul** | Notification terminal, mobile control window, iOS test device | iPhone | iOS | Carried |
 | **Atelier** | Mobile writing station | Android tablet | Android | On demand |
 | **Studio** | Apple build arm | MacBook Pro (Intel Core i5-1038NG7 · 16 GB) | macOS 26 · Xcode 26.5 | On demand |
 
@@ -120,11 +121,9 @@ The codename **E3** comes from the Sanctum's CPU family (Xeon E3).
 | Codename | Network | Memory | System disk | Load / temperature | Continuous uptime |
 |---|---|---|---|---|---|
 | Sanctum | Wired GbE (Killer E220x, 1000 Mb/s) | 1.1 of 15 GiB used; 4 GiB swap unused | 16 of 455 GB (4%) | Load 0.3; CPU 41 °C | 2 weeks 6 days (rebooted 09-06 after an incident) |
-| Forge | Wired (Intel I225-V, 1 Gb/s) | 91.6 of 175.7 GiB commit used | 915 of 953 GB (38 GB free) | GPUs: see the chapter | Rebooted that day |
+| Forge | Wired (Intel I225-V, 1 Gb/s) | 91.6 of 175.7 GiB commit used | 1 TB NVMe (see the chapter) | GPUs: see the chapter | Rebooted that day |
 | Watchdog | Wi-Fi (Intel Wireless-AC) | 0.8 of 7.5 GiB used; 4 GiB swap unused | 9 of 98 GB (10%) | Load 0.00 | 10 weeks 5 days |
 | Outpost | Cloud virtual NIC (virtio) | 2.2 of 7.8 GiB used; 2 GiB swap | 16 of 72 GB (23%) | Load 0.6–0.9 | 31 weeks 4 days |
-
-Mobile nodes: Consul online; Atelier offline (last seen 07-12); Studio offline (last seen 08-28).
 
 ---
 
@@ -200,9 +199,11 @@ It has run continuously since going live on 2026-07-12: 10 weeks 5 days of uptim
 
 ### 📱 Mobile and build nodes
 
-- **Consul** (iPhone): receives every Bark notification and serves as a mobile window into the Sanctum and the Ark over the tailnet.
-- **Atelier** (Android tablet): a mobile writing station. Offline on the snapshot date; last seen 07-12.
-- **Studio** (Intel MacBook Pro · macOS 26 · Xcode 26.5): the Forge drives Swift / iOS builds and local Expo builds on it over SSH. Code is written on Windows and compiled on the Mac. Offline on the snapshot date; last seen 08-28.
+These three nodes are not always on. They extend the Empire beyond the desk and connect it to Apple's platforms.
+
+- **Consul** (iPhone): receives every Bark notification and serves as a mobile window into the Sanctum and the Ark over the tailnet. It is also the iOS test device: the phone itself sits on the tailnet, so an app under development can reach back into the Empire over the tailnet for testing, without sharing a local network with the development machine, even from outside the home.
+- **Atelier** (Android tablet): a mobile writing station for working on papers away from the desk, connected back to the Empire over the tailnet.
+- **Studio** (Intel MacBook Pro · macOS 26 · Xcode 26.5): the Empire's way into Apple's platforms. Native iOS apps (Swift) can only be built, signed, and submitted on a Mac; Expo apps are also built locally here (`eas build --local`) instead of using cloud build credits. The Forge drives the whole process over SSH on the tailnet, and the Mac is kept awake while it builds. Code is written on Windows, compiled on the Mac, and tested on the iPhone.
 
 ### 🔒 Non-public infrastructure: the Sovereign's dossier
 
@@ -237,7 +238,7 @@ Measured on 2026-09-26 with `tailscale ping` between the nodes. All the paths ra
 | Forge ↔ Outpost | Direct, across continents | 282–314 ms (median about 303 ms) | Deployment, operations |
 | Sanctum ↔ Outpost | Direct, across continents | 302–306 ms | No regular traffic between them |
 | Watchdog ↔ Outpost | Direct, across continents | 301–331 ms (median about 329 ms) | Health checks |
-| Forge ↔ Consul | Direct (mobile; relayed until the direct path forms) | 3–100 ms | Mobile viewing |
+| Forge ↔ Consul | Direct (mobile; relayed until the direct path forms) | 3–100 ms | Mobile viewing, iOS device testing |
 
 The latencies line up with the roles. The traffic that goes back and forth most often (borrowing, returning, the night shift) runs over a wired direct link of 3 ms or less. The Outpost, on another continent, handles public services and has no high-frequency exchange with the rest of the Empire. The Watchdog's jitter comes from Wi-Fi and does not matter for a check every 5 minutes.
 
@@ -278,7 +279,8 @@ Monitoring has to probe along the path that users actually take; a service's res
 | Watchdog → Sanctum, Forge, Outpost | Health checks, SSH login probe | Tailnet |
 | Sanctum, Forge → Sanctum Bark → Consul | Night-shift reports, GPU events, alerts | Bark → Apple Push Notification service |
 | Watchdog → Watchdog's own Bark → Consul | Health alerts, morning and evening heartbeat | Same; bypasses the Sanctum |
-| Forge → Studio | Remote builds | SSH over the tailnet |
+| Forge → Studio | Remote builds (iOS / Expo) | SSH over the tailnet |
+| Consul → Forge | iOS device testing: an app under development reaches back into the Empire | Tailnet |
 | Internet → Outpost | Public services | HTTPS (Caddy, automatic TLS) |
 | Sovereign → Sanctum | Law releases | Signed tag → applied after verification |
 
@@ -366,7 +368,7 @@ That is why, on the night of 2026-08-23, the system reported "out of virtual mem
 | **Browser arm (light)** | Lightpanda (MCP) | CPU (container) | Reading public pages; shared by the experts and the Sanctum's night shift |
 | **Browser arm (heavy)** | Playwright (Chromium) | CPU (container) | Complex rendering, file downloads |
 
-The two brains share one API endpoint, and only one of them runs at a time. The Sanctum's night shift asks only for the automation brain's model name, so night-shift work never reaches the conversation brain.
+The two brains share one API endpoint, and only one of them runs at a time (see Known limitations for why). The Sanctum's night shift asks only for the automation brain's model name, so night-shift work never reaches the conversation brain.
 
 Until 2026-09-25 the conversation brain was an MoE model spread across both cards. Once it became a single-card 27B model, GPU0 could be handed back in full to the desktop and image generation.
 
@@ -477,12 +479,10 @@ Each limit above corresponds to a real incident:
 
 ## Known limitations (2026-09-26)
 
-- The Sanctum, the Forge, and the Watchdog share one location; only the cloud Outpost sits somewhere else. The third, offline cold-backup layer is not yet automated.
+- The Sanctum, the Forge, and the Watchdog share one location; only the cloud Outpost sits somewhere else.
 - The Watchdog sits behind the home network and cannot reach the Outpost's public service layer, so for now it can only confirm that the Outpost machine and its tailnet connection are alive.
 - The Sanctum has only 16 GB of memory, which will become a bottleneck as the vector store grows.
-- The two brains share GPU1, so only one can run at a time. While the Sovereign is in a conversation the automation brain is away, and night-shift work that needs the local model waits for it to come back.
-- The Forge's system drive has only about 38 GB free: the 112 GB page file and the native Docker volumes both live on it.
-- The Watchdog has only Wi-Fi, so its latency jitters widely (7–119 ms).
+- The two brains cannot run at the same time, for two reasons. The first is GPU memory: GPU0 is kept for the desktop and image generation, so both brains can only live on GPU1. The second is host memory: the Forge has only 64 GB (2× 32 GB), and whatever GPU memory each brain uses inside WSL (about 23 GB) is charged again, in equal measure, against the host's commit. On 2026-09-22, for a vLLM load spanning both cards, the start gate estimated a commit peak of 140.1 GiB, 12.4 GiB over the limit of 127.7 GiB at the time. So while the Sovereign is in a conversation the automation brain is away, and night-shift work that needs the local model waits for it to come back.
 
 ---
 
