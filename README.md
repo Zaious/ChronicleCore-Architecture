@@ -7,6 +7,7 @@ Welcome to the conceptual architecture repository for **ChronicleCore**, an expe
 This repository serves as the public "Whitepaper" and topological blueprint for the network of 38+ Human-in-the-Loop experts governed by the A1 System.
 
 [![ASAF Paper](https://img.shields.io/badge/ASAF-Frontiers%20in%20Computer%20Science%202026-blue?style=for-the-badge)](https://doi.org/10.3389/fcomp.2026.1860996)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19681148.svg)](https://doi.org/10.5281/zenodo.19681148)
 [![Agents](https://img.shields.io/badge/Agents-39-B91C1C?style=for-the-badge)](architecture/ROSTER.md)
 [![System](https://img.shields.io/badge/System-Active-success?style=for-the-badge)](architecture/TOPOLOGY.md)
 
@@ -143,6 +144,14 @@ This architecture is referenced in:
 Submitted 2026-04-19, accepted 2026-07-27, published 2026-08-17. The paper presents ChronicleCore's development as the design problem that motivated ASAF, not as its empirical validation. The state of this repository cited in the paper is frozen at tags [`v1.0-whitepaper`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v1.0-whitepaper) and [`v2.0-asaf`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v2.0-asaf).
 
 The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposing that agent identity design functions as a collaboration interface — structuring how users perceive, approach, and engage with each agent. ChronicleCore operates at **Tier 3 (Structured Identity Enforcement)** of the ASAF Identity Signal Fidelity Spectrum, where Social Affordances are structurally enforced through persistent identity modules.
+
+### Citing this repository
+
+Since v2.0, every release of this repository has been archived on Zenodo. The concept DOI below always resolves to the latest version; each release also has its own version DOI, listed on the Zenodo page.
+
+> Lee, M.-H. (2026). *ChronicleCore Architecture: Design archive of a governed multi-agent expert system* [Technical note]. Zenodo. https://doi.org/10.5281/zenodo.19681148
+
+Citation and attributed reference are permitted; other uses are governed by [`LICENSE.md`](LICENSE.md).
 
 ### Public Articles
 - [How I Architect AI Agents: From Tools to a Governable Digital Enterprise](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) (2026-02-25) — 5-Pillar governance framework introduction

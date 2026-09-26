@@ -9,6 +9,7 @@
 ![ChronicleCore Topology](https://img.shields.io/badge/System-Active-success)
 ![Global Heartbeat](https://img.shields.io/badge/Heartbeat-24%2F7-blue)
 ![ERC-8004](https://img.shields.io/badge/Identity-ERC--8004-orange)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19681148.svg)](https://doi.org/10.5281/zenodo.19681148)
 
 ## 🌐 Read in other languages
 * [English](README.md)
@@ -143,6 +144,14 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 2026-04-19 投稿,2026-07-27 接受,2026-08-17 刊出。論文把 ChronicleCore 的開發歷程當作促成 ASAF 的設計問題,而不是它的實證驗證。論文引用時的 repo 狀態凍結在標籤 [`v1.0-whitepaper`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v1.0-whitepaper) 與 [`v2.0-asaf`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v2.0-asaf)。
 
 該論文提出 **Agentic Social Affordance Framework (ASAF)**，主張 Agent 身份設計不是裝飾性的使用者體驗，而是一種**協作介面**——結構化地影響使用者感知、接近、以及與每位 Agent 的互動方式。ChronicleCore 在 ASAF 的身份信號保真度光譜中定位為 **Tier 3（結構化身份強制）**。
+
+### 引用本 repo
+
+自 v2.0 起,本 repo 的每個版本都封存在 Zenodo。下方的概念 DOI 永遠指向最新版;每個版本另有自己的版本 DOI,列在 Zenodo 頁面上。
+
+> Lee, M.-H. (2026). *ChronicleCore Architecture: Design archive of a governed multi-agent expert system* [Technical note]. Zenodo. https://doi.org/10.5281/zenodo.19681148
+
+引用與標註出處的提及是允許的;其他用途依 [`LICENSE.md`](LICENSE.md)。
 
 ### 公開文章
 - [How I Architect AI Agents: From Tools to a Governable Digital Enterprise](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) (2026-02-25) — 五柱治理框架首次公開

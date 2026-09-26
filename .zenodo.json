@@ -1,0 +1,33 @@
+{
+  "title": "ChronicleCore Architecture: Design Archive of a Governed Multi-Agent Expert System",
+  "upload_type": "publication",
+  "publication_type": "technicalnote",
+  "creators": [
+    {
+      "name": "Lee, Meng-Han",
+      "orcid": "0009-0007-1685-0877"
+    }
+  ],
+  "description": "<p>Design archive of ChronicleCore, a multi-agent expert system of 39 persona-based agents governed by a human Sovereign. Documents are published in English and Traditional Chinese.</p><p>Version 3.0 (2026-09-26) adds:</p><ul><li><strong>Eras</strong>: the system's history from the Antigravity prototypes through Chronicle-Ark to the Empire generation (2025-11 to 2026-09).</li><li><strong>System</strong>: a concept-level description of the Empire generation's architecture (canon authority, leases, rooms, switchable model backends, identity module v2).</li><li><strong>Infrastructure</strong>: measured hardware, GPU configuration, and relationships between machines as of 2026-09-26, including local vLLM coordination on a dual RTX 3090 workstation.</li><li><strong>Chronicles</strong>: the birth of Kagami, the first agent created natively in identity structure 2.0.</li></ul><p>Earlier states of this repository (tags v1.0-whitepaper and v2.0-asaf) are cited in the ASAF paper, to which this archive is supplementary. Detailed specifications that are not published are committed by SHA-256 hashes listed in the documents.</p>",
+  "access_right": "open",
+  "license": "other-closed",
+  "notes": "All rights reserved. This archive is covered by the ChronicleCore Conceptual Architecture License Agreement (LICENSE.md in the archive). Reading, studying, sharing links, and referencing the concepts with explicit attribution and a link to the repository are permitted. Commercial use of the model or its nomenclature, duplicating or imitating the agent personas, and derivative architectural mappings require prior written consent from the copyright holder.",
+  "keywords": [
+    "Multi-Agent Systems",
+    "Agent Identity Design",
+    "Human-in-the-Loop",
+    "AI Governance",
+    "Agentic AI",
+    "System Architecture",
+    "Local LLM Inference",
+    "vLLM"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.3389/fcomp.2026.1860996",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ]
+}

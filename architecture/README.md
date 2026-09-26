@@ -6,7 +6,7 @@ Detailed architectural documents and artifacts for the ChronicleCore expert syst
 
 | Path | Description |
 |------|-------------|
-| [`TOPOLOGY.md`](TOPOLOGY.md) | Mermaid topology diagram — 5 Pillars governance structure |
+| [`TOPOLOGY.md`](TOPOLOGY.md) | Mermaid topology diagram — 5 Pillars governance structure (A1 era, 2026-02) |
 | [`ROSTER.md`](ROSTER.md) | Full 39-agent roster with codenames, titles, ensoulment dates, and capabilities |
 | [`SYSTEM.md`](SYSTEM.md) · [`SYSTEM_zh-TW.md`](SYSTEM_zh-TW.md) | The Empire's logical architecture: the Sanctum as canon, leases, rooms, switchable brains, and identity module v2 |
 | [`ERAS.md`](ERAS.md) · [`ERAS_zh-TW.md`](ERAS_zh-TW.md) | The eras of ChronicleCore, from the Antigravity prototypes through the Ark to the Empire (2025-11 → 2026-09) |
