@@ -4,7 +4,7 @@ English · [繁體中文](ERAS_zh-TW.md)
 
 > **Snapshot date**: 2026-09-26
 > **Sources**: git history, the model field recorded in session logs, Ark data, Codex sessions, and the Sovereign's public posts and recollections. A fully sourced edition, with every claim graded by evidence level, is kept in a private archive.
-> See [`ROSTER.md`](ROSTER.md) for the expert roster and [`INFRASTRUCTURE_zh-TW.md`](INFRASTRUCTURE_zh-TW.md) for hardware and nodes (Traditional Chinese; English edition pending).
+> See [`ROSTER.md`](ROSTER.md) for the expert roster and [`INFRASTRUCTURE.md`](INFRASTRUCTURE.md) for hardware and nodes.
 
 ## Overview
 
