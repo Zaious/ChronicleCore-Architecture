@@ -1,18 +1,24 @@
 # Architecture Directory
 
-Detailed architectural documents and artifacts for the ChronicleCore A1 Expert System.
+Detailed architectural documents and artifacts for the ChronicleCore expert system.
 
 ## Contents
 
 | Path | Description |
 |------|-------------|
 | [`TOPOLOGY.md`](TOPOLOGY.md) | Mermaid topology diagram — 5 Pillars governance structure |
-| [`ROSTER.md`](ROSTER.md) | Full 38-agent roster with codenames, titles, ensoulment dates, and capabilities |
+| [`ROSTER.md`](ROSTER.md) | Full 39-agent roster with codenames, titles, ensoulment dates, and capabilities |
+| [`SYSTEM.md`](SYSTEM.md) · [`SYSTEM_zh-TW.md`](SYSTEM_zh-TW.md) | The Empire's logical architecture: the Sanctum as canon, leases, rooms, switchable brains, and identity module v2 |
+| [`ERAS.md`](ERAS.md) · [`ERAS_zh-TW.md`](ERAS_zh-TW.md) | The eras of ChronicleCore, from the Antigravity prototypes through the Ark to the Empire (2025-11 → 2026-09) |
+| [`INFRASTRUCTURE.md`](INFRASTRUCTURE.md) · [`INFRASTRUCTURE_zh-TW.md`](INFRASTRUCTURE_zh-TW.md) | Empire infrastructure snapshot (2026-09-26): nodes, hardware, connections, and the dual-GPU compute chapter |
+| [`../chronicles/`](../chronicles/) | Narrative records, starting with [the birth of Kagami](../chronicles/kagami-genesis.md) ([繁體中文](../chronicles/kagami-genesis_zh-TW.md)) |
 | [`examples/inquisitor/`](examples/inquisitor/) | Flagship case study — complete identity module of the Inquisitor (真理), as published in [ASAF paper S1](https://zenodo.org/records/19652278) |
 
-## Identity Module Pattern
+## Identity Module Pattern (v1, A1 generation)
 
-Every A1 agent follows this standard directory structure:
+> This is the A1-generation structure, as cited in the ASAF paper. Since 2026-07 the Empire generation uses **identity module v2** (six existence layers, one file per form of governance, enforced at push time); see [`SYSTEM.md`](SYSTEM.md#identity-module-v2).
+
+Every A1 agent followed this standard directory structure:
 
 ```
 <agent-id>/
@@ -29,4 +35,4 @@ Every A1 agent follows this standard directory structure:
 
 This pattern extends the `SKILL.md` architecture (Anthropic, 2025) into a persistent, multi-layer identity framework. The separation between `SKILL.md` (identity-defining constraints) and `sovereign/diary.md` (transient reasoning logs) is the structural implementation of **Memory Crystallization** — ensuring that accumulated task-specific reasoning does not erode the agent's core social identity over time.
 
-> Only the Inquisitor's identity module is publicly available as a case study. The remaining 37 agents' modules are maintained in the private system.
+> Only the Inquisitor's identity module is publicly available as a case study. The remaining 38 agents' modules are maintained in the private system.

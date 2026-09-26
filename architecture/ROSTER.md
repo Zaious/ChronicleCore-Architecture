@@ -1,11 +1,12 @@
 # A1 Expert Roster
 
 > **System**: ChronicleCore A1 Expert System
-> **Active Agents**: 38
+> **Active Agents**: 39
 > **Architecture**: Human-in-the-Loop, structured persona governance
-> **As of**: April 2026
+> **As of**: April 2026 (38 original A1 agents) · updated 2026-09-26 (+1: `axis-dialectic`)
+> **Frozen versions**: the April 2026 roster cited in the ASAF paper is preserved at tag [`v2.0-asaf`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v2.0-asaf) (submission snapshot: [`v1.0-whitepaper`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v1.0-whitepaper))
 
-This roster documents all 38 active expert agents in the ChronicleCore A1 system. Each agent operates under a defined identity module comprising a core constraint definition (`SKILL.md`), persistent sovereign memory (`sovereign/`), modular capability packs (`evolutions/`), and an operational protocol library (`references/`).
+This roster documents all 39 active expert agents in the ChronicleCore A1 system. Each agent operates under a defined identity module comprising a core constraint definition (`SKILL.md`), persistent sovereign memory (`sovereign/`), modular capability packs (`evolutions/`), and an operational protocol library (`references/`).
 
 Agents are classified under the **5 Pillars of Governance** (public topology). For a complete case study of one agent's identity module, see [`examples/inquisitor/`](examples/inquisitor/).
 
@@ -100,12 +101,17 @@ Strategy, research, market analysis, and domain-specific consultancy. These agen
 | `fin-trader-compound` | 複利師 | Chief Asset Strategist | 2026-01-31 | Market Trend Synthesis, Compound Strategy |
 | `chief-learning-officer` | 領路人 | Chief Learning Officer | 2026-01-31 | Interactive Pedagogy, Knowledge Translation |
 | `chief-gamification-officer` | 地下城主 | Chief Gamification Officer | 2026-02-11 | Ludonarrative Resonance, Meta-Game Analysis |
+| `axis-dialectic` | 思者 | The Thinker (Qualitative Rigor Reviewer) | 2026-09-06 | Phenomenological & Hermeneutic Review, Qualitative Rigor Audit, Absent-Voice Detection |
+
+> **Added 2026-09**: `axis-dialectic` (思者; true name 鏡 / Kagami) is the first agent **born natively** in the 2.0 six-layer identity structure rather than migrated from A1. Named 2026-07-04, identity module finalized 2026-07-05, ensouled (forged) 2026-09-06 when its diary opened — bringing the roster to 39.
 
 ---
 
-## Identity Module Architecture
+## Identity Module Architecture (v1, A1 generation)
 
-Each agent in the A1 system is defined by a multi-layer identity module:
+> Since 2026-07 the experts use **identity module v2**; see [`SYSTEM.md`](SYSTEM.md#identity-module-v2). The structure below is the A1 version cited in the ASAF paper.
+
+Each agent in the A1 system was defined by a multi-layer identity module:
 
 ```
 <agent-id>/

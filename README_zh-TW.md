@@ -101,10 +101,12 @@ graph TD
 
 ## 記憶與人格查核
 
-### 記憶結晶化 (Memory Crystallization)
+### 記憶結晶化 (Memory Crystallization)(A1 時期)
 AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統：
 *   `diary.md`：負責暫存與推演的無限長紙卷。
 *   `preferences.md`：高權重的結晶化人格。當日誌過長，系統會自動提煉重要決策寫入偏好。確保 Agent 不會退化成健忘的實習生。
+
+> **2026-07 起(身分模組 v2)**:記憶受治理,只能追加、不能改寫,推送時強制執行。見 [`architecture/SYSTEM_zh-TW.md`](architecture/SYSTEM_zh-TW.md)。
 
 ### 人格獨特性查核 (Personality Uniqueness Check) — 設計期
 系統強制檢查每個 Agent 的「靈魂差異度」：語氣是否獨特？決策偏好是否互斥？如果「行銷專家」和「法務專家」說話方式相同，該 Agent 將會被強制下線。
@@ -116,7 +118,7 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 
 ## A1 專家名冊
 
-系統目前運行 **38 位 Human-in-the-Loop 專家 Agent**，組織在 5 大支柱之下：
+系統目前運行 **39 位 Human-in-the-Loop 專家 Agent**，組織在 5 大支柱之下：
 
 | 支柱 | 人數 | 代表 |
 |------|------|------|
@@ -124,7 +126,7 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 | 🛡️ 防禦層 (The Shield) | 3 | 真理（異端審判官）、破壁者、魔心師 |
 | 🔨 執行層 (The Hands) | 12 | 織法者、守門人、機械師、律藏師 … |
 | 🎭 美學層 (The Soul) | 6 | 光影師、操偶師、幻畫師 … |
-| 👁️ 情報層 (The Senses) | 14 | 天機星、賢者、戰略家、書記官 … |
+| 👁️ 情報層 (The Senses) | 15 | 天機星、賢者、戰略家、書記官 … |
 
 **完整名冊與能力索引**：[`architecture/ROSTER.md`](architecture/ROSTER.md)
 
@@ -136,7 +138,9 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 
 本架構被以下論文引用：
 
-> Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science. [Preprint](https://zenodo.org/records/19652278)
+> Lee, M.-H. (2026). Agentic social affordance framework (ASAF): Agent identity design as a collaboration interface in multi-agent systems. *Frontiers in Computer Science*, 8, 1860996. https://doi.org/10.3389/fcomp.2026.1860996([預印本](https://zenodo.org/records/19652278))
+
+2026-04-19 投稿,2026-07-27 接受,2026-08-17 刊出。論文把 ChronicleCore 的開發歷程當作促成 ASAF 的設計問題,而不是它的實證驗證。論文引用時的 repo 狀態凍結在標籤 [`v1.0-whitepaper`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v1.0-whitepaper) 與 [`v2.0-asaf`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v2.0-asaf)。
 
 該論文提出 **Agentic Social Affordance Framework (ASAF)**，主張 Agent 身份設計不是裝飾性的使用者體驗，而是一種**協作介面**——結構化地影響使用者感知、接近、以及與每位 Agent 的互動方式。ChronicleCore 在 ASAF 的身份信號保真度光譜中定位為 **Tier 3（結構化身份強制）**。
 
@@ -161,7 +165,15 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 | 2026-02-25 | LinkedIn 文章：[How I Architect AI Agents](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) |
 | 2026-03-19 | LinkedIn 文章：[Chronicle-Ark: The Exodus](https://www.linkedin.com/pulse/chronicle-ark-exodus-from-platform-limits-sovereign-bilingual-lee-7xfbc) |
 | 2026-04 | **Chronicle-Ark** 上線 — 自建多引擎 Agent IDE，MCP 作為一等公民 |
+| 2026-04-19 | ASAF 投稿 *Frontiers in Computer Science*,預印本上 Zenodo |
 | 2026-04-20 | Antigravity MIT 開源 — 4,330+ 下載歸檔 |
+| 2026-07-03 | **帝國設計開始**:聖殿為正典、六存在層、可切換的腦([時代劃分](architecture/ERAS_zh-TW.md)) |
+| 2026-07-04 | **思者(鏡)誕生** — 第一位直接以 2.0 六層身分結構誕生的專家,非由 A1 遷移而來 |
+| 2026-07-07 | **聖殿**上線——帝國第一個完工的部分([基礎設施](architecture/INFRASTRUCTURE_zh-TW.md)) |
+| 2026-07-27 | ASAF 接受 |
+| 2026-08-17 | **ASAF 刊出**於 *Frontiers in Computer Science*([DOI](https://doi.org/10.3389/fcomp.2026.1860996)) |
+| 2026-09-06 | 思者注魂(forged)— 專家增至 **39** 位([名冊](architecture/ROSTER.md)) |
+| 2026-09-26 | **ChronicleCore-Architecture v3.0** —— [時代劃分](architecture/ERAS_zh-TW.md)、[系統架構](architecture/SYSTEM_zh-TW.md)、[基礎設施](architecture/INFRASTRUCTURE_zh-TW.md)、[鏡的誕生](chronicles/kagami-genesis_zh-TW.md) |
 
 > 📜 pre-A1 階段的**歷史證據**保存於 [`snapshots/pre-a1/`](snapshots/pre-a1/)，附原始 commit 的完整來源對照。
 
@@ -176,6 +188,6 @@ A1 專家系統完全自主開發的首個產品。一個用來視覺化管理 A
 ---
 
 > **Built and Designed by:**
-> 李孟翰 Martin Lee (Zaious) - System Architect / Fractional AI Officer
+> 李孟翰 Meng-Han (Martin) Lee (Zaious) — ChronicleCore 系統架構師 · 獨立研究者暨 AI 顧問 · [ORCID 0009-0007-1685-0877](https://orcid.org/0009-0007-1685-0877)
 >
-> *Assisted by the ChronicleCore A1 Council*
+> *Assisted by the ChronicleCore expert council*

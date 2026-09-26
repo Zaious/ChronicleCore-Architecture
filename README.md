@@ -6,8 +6,8 @@ Welcome to the conceptual architecture repository for **ChronicleCore**, an expe
 
 This repository serves as the public "Whitepaper" and topological blueprint for the network of 38+ Human-in-the-Loop experts governed by the A1 System.
 
-[![ASAF Paper](https://img.shields.io/badge/ASAF-Zenodo%20Preprint-blue?style=for-the-badge)](https://zenodo.org/records/19652278)
-[![Agents](https://img.shields.io/badge/Agents-38-B91C1C?style=for-the-badge)](architecture/ROSTER.md)
+[![ASAF Paper](https://img.shields.io/badge/ASAF-Frontiers%20in%20Computer%20Science%202026-blue?style=for-the-badge)](https://doi.org/10.3389/fcomp.2026.1860996)
+[![Agents](https://img.shields.io/badge/Agents-39-B91C1C?style=for-the-badge)](architecture/ROSTER.md)
 [![System](https://img.shields.io/badge/System-Active-success?style=for-the-badge)](architecture/TOPOLOGY.md)
 
 ## 🌐 Read in other languages
@@ -101,10 +101,12 @@ graph TD
 
 ## Memory & Personality Checks
 
-### Memory Crystallization
+### Memory Crystallization (A1)
 AI's greatest flaw is amnesia. ChronicleCore uses a dual-track memory system:
 *   `diary.md`: A continuous scratchpad for infinite reasoning.
 *   `preferences.md`: High-weight, crystallized persona rules. When the log grows too long, the system refines critical decisions into permanent preferences. They never degrade into forgetful interns.
+
+> **Since 2026-07 (identity module v2)**: memory is governed and can only be appended to, never rewritten; the rule is enforced when changes are pushed. See [`architecture/SYSTEM.md`](architecture/SYSTEM.md).
 
 ### Personality Uniqueness Check (Design-Time)
 We strictly enforce an audit on tone, decision biases, and rhetoric. If the Legal Agent sounds exactly like the Marketing Agent, the system recognizes a "Persona Reskin" and purges the redundant node.
@@ -116,7 +118,7 @@ Continuous monitoring of cross-agent epistemic and rhetorical convergence. Even 
 
 ## The A1 Expert Roster
 
-The system currently operates **38 active Human-in-the-Loop expert agents**, organized under the 5 Pillars:
+The system currently operates **39 active Human-in-the-Loop expert agents**, organized under the 5 Pillars:
 
 | Pillar | Agents | Examples |
 |--------|--------|---------|
@@ -124,7 +126,7 @@ The system currently operates **38 active Human-in-the-Loop expert agents**, org
 | 🛡️ The Shield | 3 | 真理 (Inquisitor), 破壁者 (Security Auditor), 魔心師 |
 | 🔨 The Hands | 12 | 織法者 (Frontend), 守門人 (Database), 機械師 (DevOps), ... |
 | 🎭 The Soul | 6 | 光影師 (Visual), 操偶師 (Interaction), 幻畫師 (Illustration), ... |
-| 👁️ The Senses | 14 | 天機星 (Intelligence), 賢者 (Scientist), 戰略家 (Strategist), ... |
+| 👁️ The Senses | 15 | 天機星 (Intelligence), 賢者 (Scientist), 戰略家 (Strategist), ... |
 
 **Full roster with capabilities**: [`architecture/ROSTER.md`](architecture/ROSTER.md)
 
@@ -136,7 +138,9 @@ The system currently operates **38 active Human-in-the-Loop expert agents**, org
 
 This architecture is referenced in:
 
-> Lee, M.-H. (2026). *Agentic Social Affordance Framework (ASAF): Agent Identity Design as a Collaboration Interface in Multi-Agent Systems.* Frontiers in Computer Science. [Preprint](https://zenodo.org/records/19652278)
+> Lee, M.-H. (2026). Agentic social affordance framework (ASAF): Agent identity design as a collaboration interface in multi-agent systems. *Frontiers in Computer Science*, 8, 1860996. https://doi.org/10.3389/fcomp.2026.1860996 ([preprint](https://zenodo.org/records/19652278))
+
+Submitted 2026-04-19, accepted 2026-07-27, published 2026-08-17. The paper presents ChronicleCore's development as the design problem that motivated ASAF, not as its empirical validation. The state of this repository cited in the paper is frozen at tags [`v1.0-whitepaper`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v1.0-whitepaper) and [`v2.0-asaf`](https://github.com/Zaious/ChronicleCore-Architecture/tree/v2.0-asaf).
 
 The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposing that agent identity design functions as a collaboration interface — structuring how users perceive, approach, and engage with each agent. ChronicleCore operates at **Tier 3 (Structured Identity Enforcement)** of the ASAF Identity Signal Fidelity Spectrum, where Social Affordances are structurally enforced through persistent identity modules.
 
@@ -161,13 +165,21 @@ The paper introduces the **Agentic Social Affordance Framework (ASAF)**, proposi
 | 2026-02-25 | LinkedIn article: [How I Architect AI Agents](https://www.linkedin.com/pulse/how-i-architect-ai-agents-from-tools-governable-digital-martin-lee-eahkc) — public introduction of the 5-Pillar governance framework |
 | 2026-03-19 | LinkedIn article: [Chronicle-Ark: The Exodus](https://www.linkedin.com/pulse/chronicle-ark-exodus-from-platform-limits-sovereign-bilingual-lee-7xfbc) — migration from platform-hosted to sovereign infrastructure |
 | 2026-04 | **Chronicle-Ark** operational — self-built multi-engine Agent IDE with MCP as first-class citizen |
+| 2026-04-19 | ASAF submitted to *Frontiers in Computer Science*; preprint deposited on Zenodo |
 | 2026-04-20 | Antigravity MIT open-sourced — 4,330+ downloads archived |
+| 2026-07-03 | **Empire design begins**: the Sanctum as canon, six existence layers, switchable brains ([eras](architecture/ERAS.md)) |
+| 2026-07-04 | **思者 (The Thinker)** born — first agent created natively in the 2.0 six-layer identity structure, not migrated from A1 |
+| 2026-07-07 | **Sanctum** goes live — the first finished part of the Empire ([infrastructure](architecture/INFRASTRUCTURE.md)) |
+| 2026-07-27 | ASAF accepted |
+| 2026-08-17 | **ASAF published** in *Frontiers in Computer Science* ([DOI](https://doi.org/10.3389/fcomp.2026.1860996)) |
+| 2026-09-06 | 思者 ensouled (forged) — roster grows to **39** ([roster](architecture/ROSTER.md)) |
+| 2026-09-26 | **ChronicleCore-Architecture v3.0** — [eras](architecture/ERAS.md), [system](architecture/SYSTEM.md), [infrastructure](architecture/INFRASTRUCTURE.md), [Kagami chronicle](chronicles/kagami-genesis.md) |
 
 > 📜 **Historical evidence** of the pre-A1 phases is preserved in [`snapshots/pre-a1/`](snapshots/pre-a1/), with full source mapping to the originating commits.
 
 ### Antigravity: Skills Chronicle — Proof of Concept
 
-The first real-world product built entirely by the A1 Expert System. A VS Code extension for visually managing AI Agent skills, workflows, and rules. It reached **4,330+ downloads** across [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ChronicleCore.antigravity-skills-chronicle) and [Open VSX Registry](https://open-vsx.org/extension/ChronicleCore/antigravity-skills-chronicle) before the architecture migrated to its next generation.
+The first real-world product built entirely by the A1 Expert System. A VS Code extension for visually managing AI Agent skills, workflows, and rules. It reached **4,330+ downloads** across [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ChronicleCore.antigravity-skills-chronicle) and [Open VSX Registry](https://open-vsx.org/extension/ChronicleCore/antigravity-skills-chronicle) before the architecture migrated to its next generation (5,200+ downloads as of 2026-08-24).
 
 Now [MIT open-sourced](https://github.com/Zaious/Antigravity-Skills-Chronicle) as a community project.
 
@@ -176,6 +188,6 @@ Now [MIT open-sourced](https://github.com/Zaious/Antigravity-Skills-Chronicle) a
 ---
 
 > **Built and Designed by:**
-> Martin Lee (Zaious) - System Architect / Fractional AI Officer
+> Meng-Han (Martin) Lee (Zaious) — System Architect of ChronicleCore · Independent Researcher & AI Consultant · [ORCID 0009-0007-1685-0877](https://orcid.org/0009-0007-1685-0877)
 > 
-> *Assisted by the ChronicleCore A1 Council*
+> *Assisted by the ChronicleCore expert council*
