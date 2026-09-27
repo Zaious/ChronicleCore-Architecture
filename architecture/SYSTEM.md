@@ -15,36 +15,12 @@ English · [繁體中文](SYSTEM_zh-TW.md)
 
 ## Conceptual architecture
 
-```mermaid
-graph LR
-    SOV["👑 The Sovereign"]
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/system-overview.dark.svg">
+  <img alt="System overview: the Sovereign works through the Empire Ark and Claude Code and signs the law; the Ark, Claude Code, and the night shift all borrow, return, and summon experts through the Sanctum, which keeps the expert identities and the law; all three use switchable brains." src="diagrams/system-overview.light.svg">
+</picture>
 
-    subgraph SANCTUM ["🏛 Sanctum (canon)"]
-        IDR["Expert identities"]
-        LAW["Law"]
-        API["borrow · return · summon"]
-    end
-
-    subgraph HOSTS ["Where work happens"]
-        ARK["⚒ Empire Ark"]
-        CC["Claude Code"]
-        NIGHT["Night shift"]
-    end
-
-    BRAIN["🧠 Switchable brains"]
-
-    SOV --> ARK
-    SOV --> CC
-    SOV -- "signs" --> LAW
-    ARK --> API
-    CC --> API
-    NIGHT --> API
-    API --- IDR
-    API --- LAW
-    ARK --> BRAIN
-    CC --> BRAIN
-    NIGHT --> BRAIN
-```
+<sub>Source: [`diagrams/system-overview.mmd`](diagrams/system-overview.mmd)</sub>
 
 ## Three principles
 

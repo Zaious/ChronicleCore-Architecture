@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 742.4912083333335 649.7" width="742.4912083333335" height="649.7" style="--bg:#ffffff;--fg:#1f2328;--line:#d1d9e0;--accent:#0969da;--muted:#59636e;background:var(--bg)">
+<style>
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="SOV" data-to="SANCTUM" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="律法發布(簽章)" points="146.75945833333344,78.9 146.75945833333344,165.2 251.76575000000008,165.2 251.76575000000008,177.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FORGE" data-to="SANCTUM" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="借出/歸還專家 · 同步正典" points="350.8724750000001,435.6000000000001 350.8724750000001,423.6000000000001 110.50000000000006,423.6000000000001 110.50000000000006,363.30000000000007 251.76575000000008,363.30000000000007 251.76575000000008,214.10000000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SANCTUM" data-to="FORGE" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="夜班工作 → 本地模型、瀏覽器" points="273.9240000000001,214.10000000000002 273.9240000000001,411.6000000000001 371.56307500000014,411.6000000000001 371.56307500000014,435.6000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SANCTUM" data-to="WATCHDOG" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="加密備份每日鏡像" points="273.9240000000001,177.2 273.9240000000001,165.2 254.62945833333345,165.2 254.62945833333345,92.9 429.8768750000001,92.9 429.8768750000001,78.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="WATCHDOG" data-to="SANCTUM" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="健康巡檢" points="447.1190416666668,78.9 447.1190416666668,104.9 347.8194583333334,104.9 347.8194583333334,165.2 296.08225000000004,165.2 296.08225000000004,177.2" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="WATCHDOG" data-to="FORGE" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="健康巡檢" points="498.8455416666668,78.9 498.8455416666668,169.8 642.9062083333334,169.8 642.9062083333334,423.6000000000001 412.9442750000001,423.6000000000001 412.9442750000001,435.6000000000001" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="WATCHDOG" data-to="OUTPOST" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="健康巡檢" points="481.60337500000014,78.9 481.60337500000014,181.8 588.5897083333334,181.8 588.5897083333334,306.40000000000003" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SANCTUM" data-to="CONSUL" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Bark 推播" points="296.08225000000004,214.10000000000002 296.08225000000004,226.10000000000002 403.2285000000001,226.10000000000002 403.2285000000001,286.40000000000003 408.1823333333334,286.40000000000003 408.1823333333334,306.40000000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="WATCHDOG" data-to="CONSUL" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Bark 推播(獨立出口)" points="464.3612083333335,78.9 464.3612083333334,286.40000000000003 437.72666666666674,286.40000000000003 437.72666666666674,306.40000000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FORGE" data-to="STUDIO" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="SSH 遠端編譯" points="381.9083750000001,472.50000000000006 381.9083750000001,572.8000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CONSUL" data-to="FORGE" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="iOS 實機測試" points="422.95450000000005,343.3 422.9545000000001,411.6000000000001 392.2536750000001,411.6000000000001 392.2536750000001,435.6000000000001" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="SOV" data-to="SANCTUM" data-label="律法發布(簽章)">
+  <rect x="99.25945833333344" y="127.9" width="94.87" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="146.69445833333344" y="143.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">律法發布(簽章)</text>
+</g>
+<g class="edge-label" data-from="FORGE" data-to="SANCTUM" data-label="借出/歸還專家 · 同步正典">
+  <rect x="36.00000000000006" y="386.30000000000007" width="148.92400000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="110.46200000000007" y="401.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">借出/歸還專家 · 同步正典</text>
+</g>
+<g class="edge-label" data-from="SANCTUM" data-to="FORGE" data-label="夜班工作 → 本地模型、瀏覽器">
+  <rect x="188.9240000000001" y="370.30000000000007" width="169.71400000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="273.7810000000001" y="385.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">夜班工作 → 本地模型、瀏覽器</text>
+</g>
+<g class="edge-label" data-from="SANCTUM" data-to="WATCHDOG" data-label="加密備份每日鏡像">
+  <rect x="198.12945833333345" y="111.9" width="112.69000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="254.47445833333344" y="127.05000000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">加密備份每日鏡像</text>
+</g>
+<g class="edge-label" data-from="WATCHDOG" data-to="SANCTUM" data-label="健康巡檢">
+  <rect x="314.8194583333334" y="111.9" width="65.17" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="347.40445833333337" y="127.05000000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">健康巡檢</text>
+</g>
+<g class="edge-label" data-from="WATCHDOG" data-to="FORGE" data-label="健康巡檢">
+  <rect x="609.9062083333334" y="386.30000000000007" width="65.17" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="642.4912083333335" y="401.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">健康巡檢</text>
+</g>
+<g class="edge-label" data-from="WATCHDOG" data-to="OUTPOST" data-label="健康巡檢">
+  <rect x="555.5897083333334" y="249.1" width="65.17" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="588.1747083333335" y="264.25" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">健康巡檢</text>
+</g>
+<g class="edge-label" data-from="SANCTUM" data-to="CONSUL" data-label="Bark 推播">
+  <rect x="369.7285000000001" y="233.10000000000002" width="66.952" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="403.2045000000001" y="248.25000000000003" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Bark 推播</text>
+</g>
+<g class="edge-label" data-from="WATCHDOG" data-to="CONSUL" data-label="Bark 推播(獨立出口)">
+  <rect x="403.8612083333334" y="188.8" width="120.41200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="464.06720833333344" y="203.95000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Bark 推播(獨立出口)</text>
+</g>
+<g class="edge-label" data-from="FORGE" data-to="STUDIO" data-label="SSH 遠端編譯">
+  <rect x="337.4083750000001" y="507.5000000000001" width="88.336" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="381.5763750000001" y="522.6500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">SSH 遠端編譯</text>
+</g>
+<g class="edge-label" data-from="CONSUL" data-to="FORGE" data-label="iOS 實機測試">
+  <rect x="380.95450000000005" y="370.30000000000007" width="83.584" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="422.7465000000001" y="385.45000000000005" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">iOS 實機測試</text>
+</g>
+<g class="node" data-id="SOV" data-label="👑 執政官" data-shape="rectangle">
+  <rect x="95.03295833333345" y="42" width="103.453" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="146.75945833333344" y="60.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">👑 執政官</text>
+</g>
+<g class="node" data-id="FORGE" data-label="⚒ 鍛造廠" data-shape="rectangle">
+  <rect x="330.1818750000001" y="435.6000000000001" width="103.453" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="381.9083750000001" y="454.05000000000007" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">⚒ 鍛造廠</text>
+</g>
+<g class="node" data-id="SANCTUM" data-label="🏛 聖殿" data-shape="rectangle">
+  <rect x="229.60750000000007" y="177.2" width="88.633" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="273.9240000000001" y="195.64999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🏛 聖殿</text>
+</g>
+<g class="node" data-id="WATCHDOG" data-label="🐕 看門狗" data-shape="rectangle">
+  <rect x="412.63470833333344" y="42" width="103.453" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="464.3612083333334" y="60.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🐕 看門狗</text>
+</g>
+<g class="node" data-id="OUTPOST" data-label="🛰 前哨" data-shape="rectangle">
+  <rect x="544.2732083333335" y="306.40000000000003" width="88.633" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="588.5897083333335" y="324.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🛰 前哨</text>
+</g>
+<g class="node" data-id="CONSUL" data-label="📱 領事" data-shape="rectangle">
+  <rect x="378.6380000000001" y="306.40000000000003" width="88.633" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="422.9545000000001" y="324.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">📱 領事</text>
+</g>
+<g class="node" data-id="STUDIO" data-label="🍎 工作室" data-shape="rectangle">
+  <rect x="330.1818750000001" y="572.8000000000001" width="103.453" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="381.9083750000001" y="591.2500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🍎 工作室</text>
+</g>
+</svg>

@@ -15,36 +15,12 @@
 
 ## 概念架構
 
-```mermaid
-graph LR
-    SOV["👑 執政官"]
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/system-overview_zh-TW.dark.svg">
+  <img alt="系統概念圖:執政官透過帝國方舟與 Claude Code 工作,也簽章發布律法;方舟、Claude Code 與夜班都向聖殿借出、歸還、召喚專家,聖殿保存專家身分與律法;三者都使用可切換的腦。" src="diagrams/system-overview_zh-TW.light.svg">
+</picture>
 
-    subgraph SANCTUM ["🏛 聖殿(正典)"]
-        IDR["專家身分"]
-        LAW["律法"]
-        API["借出 · 歸還 · 召喚"]
-    end
-
-    subgraph HOSTS ["工作的地方"]
-        ARK["⚒ 帝國方舟"]
-        CC["Claude Code"]
-        NIGHT["夜班"]
-    end
-
-    BRAIN["🧠 可切換的腦"]
-
-    SOV --> ARK
-    SOV --> CC
-    SOV -- "簽章" --> LAW
-    ARK --> API
-    CC --> API
-    NIGHT --> API
-    API --- IDR
-    API --- LAW
-    ARK --> BRAIN
-    CC --> BRAIN
-    NIGHT --> BRAIN
-```
+<sub>原始碼:[`diagrams/system-overview_zh-TW.mmd`](diagrams/system-overview_zh-TW.mmd)</sub>
 
 ## 三個原則
 

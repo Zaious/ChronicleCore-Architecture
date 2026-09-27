@@ -1,0 +1,28 @@
+graph LR
+    SOV["👑 The Sovereign"]
+
+    subgraph SANCTUM ["🏛 Sanctum (canon)"]
+        IDR["Expert identities"]
+        LAW["Law"]
+        API["borrow · return · summon"]
+    end
+
+    subgraph HOSTS ["Where work happens"]
+        ARK["⚒ Empire Ark"]
+        CC["Claude Code"]
+        NIGHT["Night shift"]
+    end
+
+    BRAIN["🧠 Switchable brains"]
+
+    SOV --> ARK
+    SOV --> CC
+    SOV -- "signs" --> LAW
+    ARK --> API
+    CC --> API
+    NIGHT --> API
+    API --- IDR
+    API --- LAW
+    ARK --> BRAIN
+    CC --> BRAIN
+    NIGHT --> BRAIN

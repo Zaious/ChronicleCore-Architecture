@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 779.435 1425.4959999999999" width="779.435" height="1425.4959999999999" style="--bg:#0d1117;--fg:#e6edf3;--line:#3d444d;--accent:#4493f8;--muted:#9198a1;background:var(--bg)">
+<style>
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="A" data-to="B" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="215.28825000000006,76.9 215.28825000000003,116.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="B" data-to="R1" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="是" points="183.05458333333337,278.0683333333333 183.05458333333337,754.296 127.59250000000004,754.296 127.59250000000003,826.596" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="B" data-to="C" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="否" points="247.5219166666667,278.0683333333333 247.5219166666667,338.302 302.98400000000004,338.302 302.98400000000004,410.602" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="C" data-to="S" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="沒在跑 / 在 GPU0" points="277.54283333333336,537.8078333333333 277.54283333333336,891.496 180.276,891.496 180.276,963.7959999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="C" data-to="D" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="在 GPU1" points="328.42516666666666,537.8078333333334 328.42516666666666,575.249 425.692,575.249 425.692,647.549" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D" data-to="R2" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="是" points="398.6453333333334,782.7823333333333 398.6453333333334,968.396 342.81275,968.396 342.81275000000005,1040.696" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="D" data-to="E" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="否" points="452.7386666666667,782.7823333333333 452.7386666666667,837.829 508.57125,837.829 508.57125,910.1289999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="E" data-to="R3" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="否" points="480.6600833333334,1049.6848333333332 480.6600833333334,1105.5959999999998 417.9835,1105.5959999999998 417.98350000000005,1177.8959999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="E" data-to="F" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="是" points="536.4824166666667,1049.6848333333332 536.4824166666667,1105.5959999999998 599.1590000000001,1105.5959999999998 599.159,1177.8959999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="F" data-to="S2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="599.159,1214.7959999999998 599.159,1254.7959999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="S2" data-to="G" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="599.159,1291.696 599.1589999999999,1331.696" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="B" data-to="R1" data-label="是">
+  <rect x="112.59250000000004" y="761.296" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="127.35750000000004" y="776.446" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">是</text>
+</g>
+<g class="edge-label" data-from="B" data-to="C" data-label="否">
+  <rect x="287.98400000000004" y="345.302" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="302.749" y="360.452" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">否</text>
+</g>
+<g class="edge-label" data-from="C" data-to="S" data-label="沒在跑 / 在 GPU0">
+  <rect x="129.776" y="898.496" width="100.81" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="180.181" y="913.646" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">沒在跑 / 在 GPU0</text>
+</g>
+<g class="edge-label" data-from="C" data-to="D" data-label="在 GPU1">
+  <rect x="397.692" y="582.249" width="55.07200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="425.228" y="597.399" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">在 GPU1</text>
+</g>
+<g class="edge-label" data-from="D" data-to="R2" data-label="是">
+  <rect x="327.81275" y="975.396" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="342.57775" y="990.5459999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">是</text>
+</g>
+<g class="edge-label" data-from="D" data-to="E" data-label="否">
+  <rect x="493.57125" y="844.829" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="508.33625" y="859.9789999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">否</text>
+</g>
+<g class="edge-label" data-from="E" data-to="R3" data-label="否">
+  <rect x="402.9835" y="1112.5959999999998" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="417.7485" y="1127.7459999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">否</text>
+</g>
+<g class="edge-label" data-from="E" data-to="F" data-label="是">
+  <rect x="584.1590000000001" y="1112.5959999999998" width="29.53" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="598.9240000000001" y="1127.7459999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">是</text>
+</g>
+<g class="node" data-id="A" data-label="執政官在方舟按「開對話腦」" data-shape="rectangle">
+  <rect x="97.98325000000006" y="40" width="234.60999999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="215.28825000000006" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">執政官在方舟按「開對話腦」</text>
+</g>
+<g class="node" data-id="B" data-label="換班鎖被 OCR 拿著?" data-shape="diamond">
+  <polygon points="215.28825000000003,116.9 311.98925,213.601 215.28825000000003,310.302 118.58725000000004,213.601" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="215.28825000000003" y="213.601" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">換班鎖被 OCR 拿著?</text>
+</g>
+<g class="node" data-id="R1" data-label="拒絕:等 OCR 收班" data-shape="rectangle">
+  <rect x="52.524500000000046" y="826.596" width="150.13599999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="127.59250000000003" y="845.046" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">拒絕:等 OCR 收班</text>
+</g>
+<g class="node" data-id="C" data-label="ComfyUI 在跑?" data-shape="diamond">
+  <polygon points="302.98400000000004,410.602 379.3075,486.92549999999994 302.98400000000004,563.2489999999999 226.66050000000004,486.92549999999994" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="302.98400000000004" y="486.92549999999994" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">ComfyUI 在跑?</text>
+</g>
+<g class="node" data-id="S" data-label="停自動化腦 → 啟動閘 → 起對話腦(GPU1)" data-shape="rectangle">
+  <rect x="40" y="963.7959999999999" width="280.552" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="180.276" y="982.246" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">停自動化腦 → 啟動閘 → 起對話腦(GPU1)</text>
+</g>
+<g class="node" data-id="D" data-label="遊戲護欄開著?" data-shape="diamond">
+  <polygon points="425.692,647.549 506.832,728.689 425.692,809.829 344.552,728.689" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="425.692" y="728.689" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">遊戲護欄開著?</text>
+</g>
+<g class="node" data-id="R2" data-label="拒絕並推播" data-shape="rectangle">
+  <rect x="284.78775" y="1040.696" width="116.05" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="342.81275" y="1059.146" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">拒絕並推播</text>
+</g>
+<g class="node" data-id="E" data-label="ComfyUI 佇列空?" data-shape="diamond">
+  <polygon points="508.57125,910.1289999999999 592.30475,993.8625 508.57125,1077.596 424.83775,993.8625" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="508.57125" y="993.8625" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">ComfyUI 佇列空?</text>
+</g>
+<g class="node" data-id="R3" data-label="拒絕:不砍畫到一半的圖" data-shape="rectangle">
+  <rect x="321.42650000000003" y="1177.8959999999997" width="193.11399999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="417.98350000000005" y="1196.3459999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">拒絕:不砍畫到一半的圖</text>
+</g>
+<g class="node" data-id="F" data-label="收掉 ComfyUI" data-shape="rectangle">
+  <rect x="538.5405000000001" y="1177.8959999999997" width="121.237" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="599.1590000000001" y="1196.3459999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">收掉 ComfyUI</text>
+</g>
+<g class="node" data-id="S2" data-label="停自動化腦 → 啟動閘 → 起對話腦(GPU1)" data-shape="rectangle">
+  <rect x="458.883" y="1254.7959999999998" width="280.552" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="599.159" y="1273.2459999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">停自動化腦 → 啟動閘 → 起對話腦(GPU1)</text>
+</g>
+<g class="node" data-id="G" data-label="ComfyUI 改在 GPU0 重開
+(限功耗、留顯存給桌面)" data-shape="rectangle">
+  <rect x="500.37899999999996" y="1331.696" width="197.55999999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="599.159" y="1358.596" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="599.159" dy="-3.9000000000000012">ComfyUI 改在 GPU0 重開</tspan><tspan x="599.159" dy="16.900000000000002">(限功耗、留顯存給桌面)</tspan></text>
+</g>
+</svg>

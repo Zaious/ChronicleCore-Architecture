@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971.686 830" width="971.686" height="830" style="--bg:#ffffff;--fg:#1f2328;--line:#d1d9e0;--accent:#0969da;--muted:#59636e;background:var(--bg)">
+<style>
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="TAILNET" data-label="Tailscale 私網(WireGuard)· 節點之間全部點對點直連">
+  <rect x="40" y="251.3" width="891.686" height="538.7" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="251.3" width="891.686" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="52" y="265.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Tailscale 私網(WireGuard)· 節點之間全部點對點直連</text>
+<g class="subgraph" data-id="CLOUD" data-label="雲端 · 另一洲 · 約 300 ms">
+  <rect x="425.89700000000005" y="301.3" width="220.668" height="147.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="425.89700000000005" y="301.3" width="220.668" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="437.89700000000005" y="315.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">雲端 · 另一洲 · 約 300 ms</text>
+</g>
+<g class="subgraph" data-id="HOME" data-label="同一處">
+  <rect x="670.565" y="301.3" width="245.12099999999998" height="472.7" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="670.565" y="301.3" width="245.12099999999998" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="682.565" y="315.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">同一處</text>
+</g>
+<g class="subgraph" data-id="MOBILE" data-label="行動與編譯 · 按需上線">
+  <rect x="56" y="469.3" width="345.897" height="130.7" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="56" y="469.3" width="345.897" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="68" y="483.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">行動與編譯 · 按需上線</text>
+</g>
+</g>
+<polyline class="edge" data-from="SOV" data-to="FORGE" data-style="thick" data-arrow-start="false" data-arrow-end="true" points="793.1255000000001,205.3 793.1255000000001,345.3" fill="none" stroke="var(--_line)" stroke-width="2" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PUBLIC" data-to="OUTPOST" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="HTTPS" points="536.231,145 536.231,345.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FORGE" data-to="SANCTUM" data-style="solid" data-arrow-start="false" data-arrow-end="false" data-label="有線 · 2–3 ms" points="793.1255000000001,416 793.1255000000001,514.8" fill="none" stroke="var(--_line)" stroke-width="1" />
+<polyline class="edge" data-from="SANCTUM" data-to="WATCHDOG" data-style="solid" data-arrow-start="false" data-arrow-end="false" data-label="Wi-Fi · 約 23 ms" points="793.1255000000001,585.5 793.1255000000001,687.3" fill="none" stroke="var(--_line)" stroke-width="1" />
+<g class="edge-label" data-from="PUBLIC" data-to="OUTPOST" data-label="HTTPS">
+  <rect x="509.231" y="180" width="53.29" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="535.876" y="195.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">HTTPS</text>
+</g>
+<g class="edge-label" data-from="FORGE" data-to="SANCTUM" data-label="有線 · 2–3 ms">
+  <rect x="751.1255" y="451" width="83.584" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="792.9175" y="466.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">有線 · 2–3 ms</text>
+</g>
+<g class="edge-label" data-from="SANCTUM" data-to="WATCHDOG" data-label="Wi-Fi · 約 23 ms">
+  <rect x="747.1255" y="622" width="91.306" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="792.7785" y="637.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Wi-Fi · 約 23 ms</text>
+</g>
+<g class="node" data-id="PUBLIC" data-label="🌐 公網" data-shape="circle">
+  <circle cx="536.231" cy="92.5" r="52.5" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="536.231" y="92.5" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🌐 公網</text>
+</g>
+<g class="node" data-id="SOV" data-label="👑 執政官 Sovereign" data-shape="rectangle">
+  <rect x="709.1655000000001" y="168.4" width="167.92" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="793.1255000000001" y="186.85000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">👑 執政官 Sovereign</text>
+</g>
+<g class="node" data-id="OUTPOST" data-label="🛰 Outpost 前哨
+唯一公網暴露點
+服務不得連入 tailnet
+Ubuntu 24.04 · 雲端 VPS" data-shape="rectangle">
+  <rect x="441.89700000000005" y="345.3" width="188.668" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="536.231" y="389.1" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="536.231" dy="-20.8">🛰 Outpost 前哨</tspan><tspan x="536.231" dy="16.900000000000002">唯一公網暴露點</tspan><tspan x="536.231" dy="16.900000000000002">服務不得連入 tailnet</tspan><tspan x="536.231" dy="16.900000000000002">Ubuntu 24.04 · 雲端 VPS</tspan></text>
+</g>
+<g class="node" data-id="FORGE" data-label="⚒ Forge 鍛造廠
+主工作站 · GPU 算力 · 方舟
+Windows 11 · 2× RTX 3090" data-shape="rectangle">
+  <rect x="686.565" y="345.3" width="213.12099999999998" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="793.1255000000001" y="380.65000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="793.1255000000001" dy="-12.350000000000001">⚒ Forge 鍛造廠</tspan><tspan x="793.1255000000001" dy="16.900000000000002">主工作站 · GPU 算力 · 方舟</tspan><tspan x="793.1255000000001" dy="16.900000000000002">Windows 11 · 2× RTX 3090</tspan></text>
+</g>
+<g class="node" data-id="SANCTUM" data-label="🏛 Sanctum 聖殿(E3)
+正典權威 · 唯一硬依賴
+Ubuntu 24.04 · Xeon E3" data-shape="rectangle">
+  <rect x="699.5325" y="514.8" width="187.18599999999998" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="793.1255" y="550.15" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="793.1255" dy="-12.350000000000001">🏛 Sanctum 聖殿(E3)</tspan><tspan x="793.1255" dy="16.900000000000002">正典權威 · 唯一硬依賴</tspan><tspan x="793.1255" dy="16.900000000000002">Ubuntu 24.04 · Xeon E3</tspan></text>
+</g>
+<g class="node" data-id="WATCHDOG" data-label="🐕 Watchdog 看門狗
+監工 · 異機備份
+Ubuntu 24.04 · 退役筆電" data-shape="rectangle">
+  <rect x="698.421" y="687.3" width="189.409" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="793.1255000000001" y="722.65" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="793.1255000000001" dy="-12.350000000000001">🐕 Watchdog 看門狗</tspan><tspan x="793.1255000000001" dy="16.900000000000002">監工 · 異機備份</tspan><tspan x="793.1255000000001" dy="16.900000000000002">Ubuntu 24.04 · 退役筆電</tspan></text>
+</g>
+<g class="node" data-id="MOB" data-label="📱 Consul 領事 · iPhone · 推播與實機測試
+📝 Atelier 畫室 · Android 平板
+🍎 Studio 工作室 · MacBook Pro · Apple 編譯" data-shape="rectangle">
+  <rect x="72" y="514.8" width="313.897" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="228.9485" y="550.15" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="228.9485" dy="-12.350000000000001">📱 Consul 領事 · iPhone · 推播與實機測試</tspan><tspan x="228.9485" dy="16.900000000000002">📝 Atelier 畫室 · Android 平板</tspan><tspan x="228.9485" dy="16.900000000000002">🍎 Studio 工作室 · MacBook Pro · Apple 編譯</tspan></text>
+</g>
+</svg>

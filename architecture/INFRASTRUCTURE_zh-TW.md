@@ -73,36 +73,12 @@
 
 ## 節點總覽
 
-```mermaid
-graph TB
-    SOV["👑 執政官 Sovereign"]
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/infrastructure-network_zh-TW.dark.svg">
+  <img alt="基礎設施:機器與網路。Tailscale 私網裡分三組:同一處的鍛造廠、聖殿、看門狗(鍛造廠與聖殿有線直連 2–3 毫秒,聖殿與看門狗走 Wi-Fi 約 23 毫秒);另一洲雲端的前哨(約 300 毫秒,唯一的公網暴露點,服務不得連入 tailnet);按需上線的領事、畫室、工作室。公網只經 HTTPS 到前哨;執政官從鍛造廠操作。" src="diagrams/infrastructure-network_zh-TW.light.svg">
+</picture>
 
-    subgraph TAILNET ["Tailscale 私網 mesh(WireGuard)"]
-        FORGE["⚒ Forge 鍛造廠<br/>主工作站 · GPU 算力 · 方舟<br/>Windows 11 · 2× RTX 3090"]
-        SANCTUM["🏛 Sanctum 聖殿(E3)<br/>正典權威 · 唯一硬依賴<br/>Ubuntu 24.04 · Xeon E3"]
-        WATCHDOG["🐕 Watchdog 看門狗<br/>監工 · 異機備份<br/>Ubuntu 24.04 · 退役筆電"]
-        OUTPOST["🛰 Outpost 前哨<br/>唯一公網暴露點<br/>Ubuntu 24.04 · 雲端 VPS"]
-        CONSUL["📱 Consul 領事<br/>iPhone · 推播終端"]
-        ATELIER["📝 Atelier 畫室<br/>Android 平板"]
-        STUDIO["🍎 Studio 工作室<br/>MacBook Pro · Apple 編譯"]
-    end
-
-    PUBLIC(("🌐 公網"))
-
-    SOV ==> FORGE
-    FORGE -- "借出/歸還專家(租約)<br/>同步正典" --> SANCTUM
-    SANCTUM -- "夜班工作 → 本地模型、瀏覽器" --> FORGE
-    SANCTUM -- "加密備份庫每日鏡像" --> WATCHDOG
-    WATCHDOG -. "健康巡檢" .-> SANCTUM
-    WATCHDOG -. "健康巡檢" .-> FORGE
-    WATCHDOG -. "健康巡檢" .-> OUTPOST
-    SANCTUM -- "Bark 推播" --> CONSUL
-    WATCHDOG -- "Bark 推播(獨立出口)" --> CONSUL
-    FORGE -- "SSH 遠端編譯" --> STUDIO
-    CONSUL -. "iOS 實機測試" .-> FORGE
-    PUBLIC -- "HTTPS" --> OUTPOST
-    OUTPOST -. "✖ 公網服務禁止連入 tailnet" .-> SANCTUM
-```
+<sub>原始碼:[`diagrams/infrastructure-network_zh-TW.mmd`](diagrams/infrastructure-network_zh-TW.mmd)</sub>
 
 | 代號 | 角色 | 硬體(實測) | 作業系統 | 運轉 |
 |---|---|---|---|---|
@@ -269,6 +245,13 @@ graph TB
 
 ### 資料流
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/infrastructure-dataflow_zh-TW.dark.svg">
+  <img alt="資料流:執政官簽章發布律法到聖殿;鍛造廠向聖殿借出與歸還專家、同步正典;聖殿夜班把工作交給鍛造廠的本地模型與瀏覽器;聖殿每日把加密備份鏡像到看門狗;看門狗巡檢聖殿、鍛造廠、前哨;聖殿與看門狗各自經 Bark 推播到領事;鍛造廠經 SSH 遠端編譯到工作室;領事經 tailnet 連回鍛造廠做 iOS 實機測試。" src="diagrams/infrastructure-dataflow_zh-TW.light.svg">
+</picture>
+
+<sub>原始碼:[`diagrams/infrastructure-dataflow_zh-TW.mmd`](diagrams/infrastructure-dataflow_zh-TW.mmd)</sub>
+
 | 流向 | 內容 | 方式 |
 |---|---|---|
 | 方舟(鍛造廠)→ 聖殿 API | 借出與歸還專家 | tailnet |
@@ -429,20 +412,12 @@ GPU0 只接生圖,影片、LLM 與白天的 OCR 一律不上 GPU0。在 GPU0 上
 
 #### 例:按下「開對話腦」
 
-```mermaid
-flowchart TD
-    A["執政官在方舟按「開對話腦」"] --> B{"換班鎖被 OCR 拿著?"}
-    B -- 是 --> R1["拒絕:等 OCR 收班"]
-    B -- 否 --> C{"ComfyUI 在跑?"}
-    C -- "沒在跑 / 在 GPU0" --> S["停自動化腦 → 啟動閘 → 起對話腦(GPU1)"]
-    C -- "在 GPU1" --> D{"遊戲護欄開著?"}
-    D -- 是 --> R2["拒絕並推播"]
-    D -- 否 --> E{"ComfyUI 佇列空?"}
-    E -- 否 --> R3["拒絕:不砍畫到一半的圖"]
-    E -- 是 --> F["收掉 ComfyUI"]
-    F --> S2["停自動化腦 → 啟動閘 → 起對話腦(GPU1)"]
-    S2 --> G["ComfyUI 改在 GPU0 重開<br/>(限功耗、留顯存給桌面)"]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/gpu-chat-brain_zh-TW.dark.svg">
+  <img alt="流程圖:按下「開對話腦」後,依序檢查換班鎖是否被 OCR 拿著、ComfyUI 在不在跑與在哪張卡、遊戲護欄、ComfyUI 佇列是否空,決定拒絕或停自動化腦、過啟動閘、在 GPU1 起對話腦;ComfyUI 原本在 GPU1 時會改到 GPU0 重開。" src="diagrams/gpu-chat-brain_zh-TW.light.svg">
+</picture>
+
+<sub>原始碼:[`diagrams/gpu-chat-brain_zh-TW.mmd`](diagrams/gpu-chat-brain_zh-TW.mmd)</sub>
 
 結果:專家邊聊邊畫,執政官不用手動切換任何東西。
 

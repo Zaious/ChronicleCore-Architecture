@@ -1,0 +1,12 @@
+flowchart TD
+    A["The Sovereign presses 'start the conversation brain' in the Ark"] --> B{"Is the shift lock held by OCR?"}
+    B -- Yes --> R1["Refuse: wait for OCR to finish"]
+    B -- No --> C{"Is ComfyUI running?"}
+    C -- "Not running / on GPU0" --> S["Stop the automation brain → start gate → start the conversation brain (GPU1)"]
+    C -- "On GPU1" --> D{"Is the gaming guard on?"}
+    D -- Yes --> R2["Refuse and notify"]
+    D -- No --> E{"Is the ComfyUI queue empty?"}
+    E -- No --> R3["Refuse: don't kill an image mid-render"]
+    E -- Yes --> F["Stop ComfyUI"]
+    F --> S2["Stop the automation brain → start gate → start the conversation brain (GPU1)"]
+    S2 --> G["Restart ComfyUI on GPU0<br/>(power-limited, memory reserved for the desktop)"]

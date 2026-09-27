@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990.2109999999999 859.9000000000001" width="990.2109999999999" height="859.9000000000001" style="--bg:#ffffff;--fg:#1f2328;--line:#d1d9e0;--accent:#0969da;--muted:#59636e;background:var(--bg)">
+<style>
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="TAILNET" data-label="Tailscale private network · every link peer-to-peer">
+  <rect x="40" y="264.3" width="910.2109999999999" height="555.6" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="264.3" width="910.2109999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="52" y="278.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Tailscale private network · every link peer-to-peer</text>
+<g class="subgraph" data-id="CLOUD" data-label="Cloud · another continent · about 300 ms">
+  <rect x="387.3649999999999" y="314.3" width="254.75399999999996" height="147.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="387.3649999999999" y="314.3" width="254.75399999999996" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="399.3649999999999" y="328.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Cloud · another continent · about 300 ms</text>
+</g>
+<g class="subgraph" data-id="HOME" data-label="One location">
+  <rect x="666.1189999999999" y="314.3" width="268.092" height="489.6" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="666.1189999999999" y="314.3" width="268.092" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="678.1189999999999" y="328.3" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">One location</text>
+</g>
+<g class="subgraph" data-id="MOBILE" data-label="Mobile and build · on demand">
+  <rect x="56" y="490.75" width="307.3649999999999" height="130.7" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="56" y="490.75" width="307.3649999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="68" y="504.75" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Mobile and build · on demand</text>
+</g>
+</g>
+<polyline class="edge" data-from="SOV" data-to="FORGE" data-style="thick" data-arrow-start="false" data-arrow-end="true" points="800.165,218.3 800.1649999999998,358.3" fill="none" stroke="var(--_line)" stroke-width="2" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PUBLIC" data-to="OUTPOST" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="HTTPS" points="514.742,158 514.7419999999998,358.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FORGE" data-to="SANCTUM" data-style="solid" data-arrow-start="false" data-arrow-end="false" data-label="wired · 2–3 ms" points="800.165,429 800.165,532.025" fill="none" stroke="var(--_line)" stroke-width="1" />
+<polyline class="edge" data-from="SANCTUM" data-to="WATCHDOG" data-style="solid" data-arrow-start="false" data-arrow-end="false" data-label="Wi-Fi · about 23 ms" points="800.165,619.6250000000001 800.165,717.2" fill="none" stroke="var(--_line)" stroke-width="1" />
+<g class="edge-label" data-from="PUBLIC" data-to="OUTPOST" data-label="HTTPS">
+  <rect x="487.74199999999996" y="193" width="53.29" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="514.387" y="208.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">HTTPS</text>
+</g>
+<g class="edge-label" data-from="FORGE" data-to="SANCTUM" data-label="wired · 2–3 ms">
+  <rect x="757.1649999999998" y="464" width="85.96000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="800.1449999999999" y="479.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">wired · 2–3 ms</text>
+</g>
+<g class="edge-label" data-from="SANCTUM" data-to="WATCHDOG" data-label="Wi-Fi · about 23 ms">
+  <rect x="747.165" y="651.9" width="105.56200000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="799.9459999999999" y="667.05" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Wi-Fi · about 23 ms</text>
+</g>
+<g class="node" data-id="PUBLIC" data-label="🌐 Internet" data-shape="circle">
+  <circle cx="514.742" cy="99" r="59" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="514.742" y="99" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🌐 Internet</text>
+</g>
+<g class="node" data-id="SOV" data-label="👑 The Sovereign" data-shape="rectangle">
+  <rect x="726.579" y="181.4" width="147.17200000000003" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="800.165" y="199.85000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">👑 The Sovereign</text>
+</g>
+<g class="node" data-id="OUTPOST" data-label="🛰 Outpost
+The only public-facing node
+services barred from the tailnet
+Ubuntu 24.04 · cloud VPS" data-shape="rectangle">
+  <rect x="403.3649999999999" y="358.3" width="222.75399999999996" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="514.7419999999998" y="402.1" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="514.7419999999998" dy="-20.8">🛰 Outpost</tspan><tspan x="514.7419999999998" dy="16.900000000000002">The only public-facing node</tspan><tspan x="514.7419999999998" dy="16.900000000000002">services barred from the tailnet</tspan><tspan x="514.7419999999998" dy="16.900000000000002">Ubuntu 24.04 · cloud VPS</tspan></text>
+</g>
+<g class="node" data-id="FORGE" data-label="⚒ Forge
+Workstation · GPU compute · Ark
+Windows 11 · 2× RTX 3090" data-shape="rectangle">
+  <rect x="682.1189999999999" y="358.3" width="236.09199999999996" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="800.1649999999998" y="393.65000000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="800.1649999999998" dy="-12.350000000000001">⚒ Forge</tspan><tspan x="800.1649999999998" dy="16.900000000000002">Workstation · GPU compute · Ark</tspan><tspan x="800.1649999999998" dy="16.900000000000002">Windows 11 · 2× RTX 3090</tspan></text>
+</g>
+<g class="node" data-id="SANCTUM" data-label="🏛 Sanctum (E3)
+Canon authority
+the one hard dependency
+Ubuntu 24.04 · Xeon E3" data-shape="rectangle">
+  <rect x="704.7194999999999" y="532.025" width="190.891" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="800.165" y="575.8249999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="800.165" dy="-20.8">🏛 Sanctum (E3)</tspan><tspan x="800.165" dy="16.900000000000002">Canon authority</tspan><tspan x="800.165" dy="16.900000000000002">the one hard dependency</tspan><tspan x="800.165" dy="16.900000000000002">Ubuntu 24.04 · Xeon E3</tspan></text>
+</g>
+<g class="node" data-id="WATCHDOG" data-label="🐕 Watchdog
+Monitoring · off-machine backup
+Ubuntu 24.04 · retired laptop" data-shape="rectangle">
+  <rect x="685.4534999999998" y="717.2" width="229.423" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="800.1649999999998" y="752.5500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="800.1649999999998" dy="-12.350000000000001">🐕 Watchdog</tspan><tspan x="800.1649999999998" dy="16.900000000000002">Monitoring · off-machine backup</tspan><tspan x="800.1649999999998" dy="16.900000000000002">Ubuntu 24.04 · retired laptop</tspan></text>
+</g>
+<g class="node" data-id="MOB" data-label="📱 Consul · iPhone · alerts, device tests
+📝 Atelier · Android tablet
+🍎 Studio · MacBook Pro · Apple builds" data-shape="rectangle">
+  <rect x="72" y="532.025" width="275.3649999999999" height="70.7" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="209.68249999999995" y="567.375" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="209.68249999999995" dy="-12.350000000000001">📱 Consul · iPhone · alerts, device tests</tspan><tspan x="209.68249999999995" dy="16.900000000000002">📝 Atelier · Android tablet</tspan><tspan x="209.68249999999995" dy="16.900000000000002">🍎 Studio · MacBook Pro · Apple builds</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,20 @@
+graph TB
+    SOV["👑 Sovereign"]
+    FORGE["⚒ Forge"]
+    SANCTUM["🏛 Sanctum"]
+    WATCHDOG["🐕 Watchdog"]
+    OUTPOST["🛰 Outpost"]
+    CONSUL["📱 Consul"]
+    STUDIO["🍎 Studio"]
+
+    SOV -- "law releases (signed)" --> SANCTUM
+    FORGE -- "borrow / return experts · canon sync" --> SANCTUM
+    SANCTUM -- "night-shift work → local model, browser" --> FORGE
+    SANCTUM -- "encrypted backup, mirrored daily" --> WATCHDOG
+    WATCHDOG -. "health checks" .-> SANCTUM
+    WATCHDOG -. "health checks" .-> FORGE
+    WATCHDOG -. "health checks" .-> OUTPOST
+    SANCTUM -- "Bark push" --> CONSUL
+    WATCHDOG -- "Bark push (independent path)" --> CONSUL
+    FORGE -- "remote builds over SSH" --> STUDIO
+    CONSUL -. "iOS device testing" .-> FORGE

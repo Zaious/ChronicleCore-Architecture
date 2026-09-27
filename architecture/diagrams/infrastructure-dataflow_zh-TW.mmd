@@ -1,0 +1,20 @@
+graph TB
+    SOV["👑 執政官"]
+    FORGE["⚒ 鍛造廠"]
+    SANCTUM["🏛 聖殿"]
+    WATCHDOG["🐕 看門狗"]
+    OUTPOST["🛰 前哨"]
+    CONSUL["📱 領事"]
+    STUDIO["🍎 工作室"]
+
+    SOV -- "律法發布(簽章)" --> SANCTUM
+    FORGE -- "借出/歸還專家 · 同步正典" --> SANCTUM
+    SANCTUM -- "夜班工作 → 本地模型、瀏覽器" --> FORGE
+    SANCTUM -- "加密備份每日鏡像" --> WATCHDOG
+    WATCHDOG -. "健康巡檢" .-> SANCTUM
+    WATCHDOG -. "健康巡檢" .-> FORGE
+    WATCHDOG -. "健康巡檢" .-> OUTPOST
+    SANCTUM -- "Bark 推播" --> CONSUL
+    WATCHDOG -- "Bark 推播(獨立出口)" --> CONSUL
+    FORGE -- "SSH 遠端編譯" --> STUDIO
+    CONSUL -. "iOS 實機測試" .-> FORGE

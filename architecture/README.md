@@ -11,6 +11,7 @@ Detailed architectural documents and artifacts for the ChronicleCore expert syst
 | [`SYSTEM.md`](SYSTEM.md) · [`SYSTEM_zh-TW.md`](SYSTEM_zh-TW.md) | The Empire's logical architecture: the Sanctum as canon, leases, rooms, switchable brains, and identity module v2 |
 | [`ERAS.md`](ERAS.md) · [`ERAS_zh-TW.md`](ERAS_zh-TW.md) | The eras of ChronicleCore, from the Antigravity prototypes through the Ark to the Empire (2025-11 → 2026-09) |
 | [`INFRASTRUCTURE.md`](INFRASTRUCTURE.md) · [`INFRASTRUCTURE_zh-TW.md`](INFRASTRUCTURE_zh-TW.md) | Empire infrastructure snapshot (2026-09-26): nodes and hardware, measured network paths and dependencies between machines, and the dual-GPU compute chapter |
+| [`diagrams/`](diagrams/) | Diagram sources (`.mmd`) and the pre-rendered light and dark SVGs used in these documents (pretty-mermaid, `github-light` / `github-dark`) |
 | [`../chronicles/`](../chronicles/) | Narrative records, starting with [the birth of Kagami](../chronicles/kagami-genesis.md) ([繁體中文](../chronicles/kagami-genesis_zh-TW.md)) |
 | [`examples/inquisitor/`](examples/inquisitor/) | Flagship case study — complete identity module of the Inquisitor (真理), as published in [ASAF paper S1](https://zenodo.org/records/19652278) |
 

@@ -1,0 +1,22 @@
+graph TB
+    PUBLIC(("🌐 公網"))
+    SOV["👑 執政官 Sovereign"]
+
+    subgraph TAILNET ["Tailscale 私網(WireGuard)· 節點之間全部點對點直連"]
+        subgraph CLOUD ["雲端 · 另一洲 · 約 300 ms"]
+            OUTPOST["🛰 Outpost 前哨<br/>唯一公網暴露點<br/>服務不得連入 tailnet<br/>Ubuntu 24.04 · 雲端 VPS"]
+        end
+        subgraph HOME ["同一處"]
+            FORGE["⚒ Forge 鍛造廠<br/>主工作站 · GPU 算力 · 方舟<br/>Windows 11 · 2× RTX 3090"]
+            SANCTUM["🏛 Sanctum 聖殿(E3)<br/>正典權威 · 唯一硬依賴<br/>Ubuntu 24.04 · Xeon E3"]
+            WATCHDOG["🐕 Watchdog 看門狗<br/>監工 · 異機備份<br/>Ubuntu 24.04 · 退役筆電"]
+        end
+        subgraph MOBILE ["行動與編譯 · 按需上線"]
+            MOB["📱 Consul 領事 · iPhone · 推播與實機測試<br/>📝 Atelier 畫室 · Android 平板<br/>🍎 Studio 工作室 · MacBook Pro · Apple 編譯"]
+        end
+    end
+
+    SOV ==> FORGE
+    FORGE ---|"有線 · 2–3 ms"| SANCTUM
+    SANCTUM ---|"Wi-Fi · 約 23 ms"| WATCHDOG
+    PUBLIC -- "HTTPS" --> OUTPOST

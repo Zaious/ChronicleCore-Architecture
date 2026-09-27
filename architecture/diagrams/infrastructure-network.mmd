@@ -1,0 +1,22 @@
+graph TB
+    PUBLIC(("🌐 Internet"))
+    SOV["👑 The Sovereign"]
+
+    subgraph TAILNET ["Tailscale private network · every link peer-to-peer"]
+        subgraph CLOUD ["Cloud · another continent · about 300 ms"]
+            OUTPOST["🛰 Outpost<br/>The only public-facing node<br/>services barred from the tailnet<br/>Ubuntu 24.04 · cloud VPS"]
+        end
+        subgraph HOME ["One location"]
+            FORGE["⚒ Forge<br/>Workstation · GPU compute · Ark<br/>Windows 11 · 2× RTX 3090"]
+            SANCTUM["🏛 Sanctum (E3)<br/>Canon authority<br/>the one hard dependency<br/>Ubuntu 24.04 · Xeon E3"]
+            WATCHDOG["🐕 Watchdog<br/>Monitoring · off-machine backup<br/>Ubuntu 24.04 · retired laptop"]
+        end
+        subgraph MOBILE ["Mobile and build · on demand"]
+            MOB["📱 Consul · iPhone · alerts, device tests<br/>📝 Atelier · Android tablet<br/>🍎 Studio · MacBook Pro · Apple builds"]
+        end
+    end
+
+    SOV ==> FORGE
+    FORGE ---|"wired · 2–3 ms"| SANCTUM
+    SANCTUM ---|"Wi-Fi · about 23 ms"| WATCHDOG
+    PUBLIC -- "HTTPS" --> OUTPOST

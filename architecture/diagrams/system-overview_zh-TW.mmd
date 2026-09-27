@@ -1,0 +1,28 @@
+graph LR
+    SOV["👑 執政官"]
+
+    subgraph SANCTUM ["🏛 聖殿(正典)"]
+        IDR["專家身分"]
+        LAW["律法"]
+        API["借出 · 歸還 · 召喚"]
+    end
+
+    subgraph HOSTS ["工作的地方"]
+        ARK["⚒ 帝國方舟"]
+        CC["Claude Code"]
+        NIGHT["夜班"]
+    end
+
+    BRAIN["🧠 可切換的腦"]
+
+    SOV --> ARK
+    SOV --> CC
+    SOV -- "簽章" --> LAW
+    ARK --> API
+    CC --> API
+    NIGHT --> API
+    API --- IDR
+    API --- LAW
+    ARK --> BRAIN
+    CC --> BRAIN
+    NIGHT --> BRAIN

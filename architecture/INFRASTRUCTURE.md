@@ -73,36 +73,12 @@ It is built entirely from consumer hardware and one retired laptop, with no rent
 
 ## Node overview
 
-```mermaid
-graph TB
-    SOV["👑 The Sovereign"]
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/infrastructure-network.dark.svg">
+  <img alt="Infrastructure: machines and network. Inside the Tailscale private network there are three groups: the Forge, the Sanctum, and the Watchdog in one location (Forge to Sanctum wired, 2–3 ms; Sanctum to Watchdog over Wi-Fi, about 23 ms); the Outpost in the cloud on another continent (about 300 ms, the only public-facing node, its services barred from the tailnet); and Consul, Atelier, and Studio, online on demand. The internet reaches only the Outpost, over HTTPS; the Sovereign works from the Forge." src="diagrams/infrastructure-network.light.svg">
+</picture>
 
-    subgraph TAILNET ["Tailscale private mesh (WireGuard)"]
-        FORGE["⚒ Forge<br/>Workstation · GPU compute · Ark<br/>Windows 11 · 2× RTX 3090"]
-        SANCTUM["🏛 Sanctum (E3)<br/>Canon authority · the one hard dependency<br/>Ubuntu 24.04 · Xeon E3"]
-        WATCHDOG["🐕 Watchdog<br/>Monitoring · off-machine backup<br/>Ubuntu 24.04 · retired laptop"]
-        OUTPOST["🛰 Outpost<br/>The only public-facing node<br/>Ubuntu 24.04 · cloud VPS"]
-        CONSUL["📱 Consul<br/>iPhone · notification terminal"]
-        ATELIER["📝 Atelier<br/>Android tablet"]
-        STUDIO["🍎 Studio<br/>MacBook Pro · Apple builds"]
-    end
-
-    PUBLIC(("🌐 Internet"))
-
-    SOV ==> FORGE
-    FORGE -- "borrow / return experts (leases)<br/>sync the canon" --> SANCTUM
-    SANCTUM -- "night-shift work → local model, browser" --> FORGE
-    SANCTUM -- "encrypted backup, mirrored daily" --> WATCHDOG
-    WATCHDOG -. "health checks" .-> SANCTUM
-    WATCHDOG -. "health checks" .-> FORGE
-    WATCHDOG -. "health checks" .-> OUTPOST
-    SANCTUM -- "Bark push" --> CONSUL
-    WATCHDOG -- "Bark push (independent path)" --> CONSUL
-    FORGE -- "remote builds over SSH" --> STUDIO
-    CONSUL -. "iOS device testing" .-> FORGE
-    PUBLIC -- "HTTPS" --> OUTPOST
-    OUTPOST -. "✖ public services barred from the tailnet" .-> SANCTUM
-```
+<sub>Source: [`diagrams/infrastructure-network.mmd`](diagrams/infrastructure-network.mmd)</sub>
 
 | Codename | Role | Hardware (measured) | Operating system | Uptime |
 |---|---|---|---|---|
@@ -269,6 +245,13 @@ Monitoring has to probe along the path that users actually take; a service's res
 
 ### Data flows
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/infrastructure-dataflow.dark.svg">
+  <img alt="Data flows: the Sovereign releases signed law to the Sanctum; the Forge borrows and returns experts and syncs the canon with the Sanctum; the Sanctum&#x27;s night shift sends work to the Forge&#x27;s local model and browser; the Sanctum mirrors its encrypted backup to the Watchdog daily; the Watchdog health-checks the Sanctum, the Forge, and the Outpost; the Sanctum and the Watchdog each push notifications to Consul through Bark; the Forge runs remote builds on Studio over SSH; Consul reaches back to the Forge over the tailnet for iOS device testing." src="diagrams/infrastructure-dataflow.light.svg">
+</picture>
+
+<sub>Source: [`diagrams/infrastructure-dataflow.mmd`](diagrams/infrastructure-dataflow.mmd)</sub>
+
 | Direction | What | How |
 |---|---|---|
 | Ark (Forge) → Sanctum API | Borrowing and returning experts | Tailnet |
@@ -429,20 +412,12 @@ GPU0 takes image generation only; video, LLMs, and daytime OCR never run on GPU0
 
 #### Example: pressing "start the conversation brain"
 
-```mermaid
-flowchart TD
-    A["The Sovereign presses 'start the conversation brain' in the Ark"] --> B{"Is the shift lock held by OCR?"}
-    B -- Yes --> R1["Refuse: wait for OCR to finish"]
-    B -- No --> C{"Is ComfyUI running?"}
-    C -- "Not running / on GPU0" --> S["Stop the automation brain → start gate → start the conversation brain (GPU1)"]
-    C -- "On GPU1" --> D{"Is the gaming guard on?"}
-    D -- Yes --> R2["Refuse and notify"]
-    D -- No --> E{"Is the ComfyUI queue empty?"}
-    E -- No --> R3["Refuse: don't kill an image mid-render"]
-    E -- Yes --> F["Stop ComfyUI"]
-    F --> S2["Stop the automation brain → start gate → start the conversation brain (GPU1)"]
-    S2 --> G["Restart ComfyUI on GPU0<br/>(power-limited, memory reserved for the desktop)"]
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/gpu-chat-brain.dark.svg">
+  <img alt="Flowchart: after the Sovereign presses &#x27;start the conversation brain&#x27;, the system checks in turn whether OCR holds the shift lock, whether and where ComfyUI is running, whether the gaming guard is on, and whether the ComfyUI queue is empty; it then refuses, or stops the automation brain, passes the start gate, and starts the conversation brain on GPU1, restarting ComfyUI on GPU0 if it had been on GPU1." src="diagrams/gpu-chat-brain.light.svg">
+</picture>
+
+<sub>Source: [`diagrams/gpu-chat-brain.mmd`](diagrams/gpu-chat-brain.mmd)</sub>
 
 The result: experts can talk and draw at the same time, and the Sovereign never has to switch anything by hand.
 
