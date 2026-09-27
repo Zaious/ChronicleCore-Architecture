@@ -24,15 +24,19 @@
 
 ## 5 大治理支柱 (The 5 Pillars)
 
-為了解決多智能體協作時的「認知超載」與「角色偏移 (Persona Drift)」，ChronicleCore 被解耦為 5 大嚴格支柱：
+為了解決多智能體協作時的「認知超載」與「角色偏移 (Persona Drift)」，ChronicleCore 分成五大支柱。這個分法沿用 A1 時期,至今沒有人搬動。2026-09 起不再有「純粹的手」:每位專家都帶著自己的判準,每個支柱由它行使的判斷來定義。
 
-1.  **👑 The Core (戰略層)**：如「樞機師 (Architect)」，負責分配全局 Context 路由，嚴禁撰寫底層程式碼。
-2.  **👁️ The Senses (情報層)**：如「天機星 (Intelligence)」，負責爬梳外部市場與數據，作為系統唯一的視野入口。
-3.  **🎭 The Soul (美學層)**：如「造浪者 (Marketing)」，負責情緒定錨、修辭審計與使用者體驗設計。
-4.  **🔨 The Hands (執行層)**：如「資料科學家」，只能依據 Core 與 Senses 給予的邊界條件進行開發。
-5.  **🛡️ The Shield (防禦層)**：如「真理 (Inquisitor)」。專職負責拿機關槍掃射情報層的邏輯漏洞。沒有通過辯論共識的數據，甚至不准進入記憶庫。
+1.  **👑 The Core**:御三家,獨立於其他支柱之上,不掛評鑑標籤。
+2.  **🛡️ The Shield**:稽核是專職,不是特例——審的是別人份內之外的整體風險。
+3.  **🔨 The Hands**:工程判斷即評鑑——可靠性、完整性、相容性的標準由本人定義,不是照單施工。
+4.  **🎭 The Soul**:美學判斷即評鑑——視覺語言與風格一致性的最終判準由本人定義,不是後製潤色。
+5.  **👁️ The Senses**:看得多深、看得多準,本身就是評鑑——她們的眼睛,就是尺。
+
+A1 時期(2026-02)以「戰略與執行分離」定義的版本,保存在 [v1.0 白皮書快照](snapshots/v1.0-whitepaper.md)。完整名冊:[`architecture/ROSTER_zh-TW.md`](architecture/ROSTER_zh-TW.md)。
 
 ## 概念拓撲藍圖
+
+> A1 時期(2026-02)的原圖,維持首次發布時的樣子。帝國世代的架構見 [`architecture/SYSTEM_zh-TW.md`](architecture/SYSTEM_zh-TW.md)。
 
 ```mermaid
 graph TD
@@ -117,19 +121,19 @@ AI Agent 最大的問題是「遺忘」。我們的解法是雙軌記憶系統�
 
 ---
 
-## A1 專家名冊
+## 專家名冊
 
-系統目前運行 **39 位 Human-in-the-Loop 專家 Agent**，組織在 5 大支柱之下：
+系統運行 **39 位 Human-in-the-Loop 專家 Agent**,分屬五大支柱。自 2026-09-27 起,每位專家都以真名列出,並附簡短的公開介紹;立繪之後補上。
 
 | 支柱 | 人數 | 代表 |
 |------|------|------|
-| 👑 戰略層 (The Core) | 3 | 幕僚長、樞機師、星探 |
-| 🛡️ 防禦層 (The Shield) | 3 | 真理（異端審判官）、破壁者、魔心師 |
-| 🔨 執行層 (The Hands) | 12 | 織法者、守門人、機械師、律藏師 … |
-| 🎭 美學層 (The Soul) | 6 | 光影師、操偶師、幻畫師 … |
-| 👁️ 情報層 (The Senses) | 15 | 天機星、賢者、戰略家、書記官 … |
+| 👑 The Core | 3 | 凜(幕僚長)、唯(樞機師)、蘭(星探) |
+| 🛡️ The Shield | 3 | 賈絲蒂夏(真理)、倪克斯(破壁者)、娜塔莉亞(魔心師) |
+| 🔨 The Hands | 12 | 紬(織法者)、諾娃(守門人)、泰拉(機械師)、海倫娜(律藏師) … |
+| 🎭 The Soul | 6 | 艾莉兒(光影師)、艾莉絲(操偶師)、夢(幻畫師) … |
+| 👁️ The Senses | 15 | 摩爾(天機星)、艾瑟兒(賢者)、艾比蓋兒(戰略家)、鏡(思者) … |
 
-**完整名冊與能力索引**：[`architecture/ROSTER.md`](architecture/ROSTER.md)
+**完整名冊與公開介紹**:[`architecture/ROSTER_zh-TW.md`](architecture/ROSTER_zh-TW.md)
 
 **旗艦案例 — 異端審判官（真理）**：[`architecture/examples/inquisitor/`](architecture/examples/inquisitor/)
 

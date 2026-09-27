@@ -24,15 +24,19 @@ This repository serves as the public "Whitepaper" and topological blueprint for 
 
 ## The 5 Pillars of Governance
 
-To prevent cognitive overload and persona drift during multi-agent orchestration, ChronicleCore is decoupled into 5 strict pillars:
+To prevent cognitive overload and persona drift during multi-agent orchestration, ChronicleCore is divided into five pillars. The structure dates from the A1 generation, and nobody has moved since. Since September 2026 there are no "pure hands": every expert brings a standard of judgment of her own, and each pillar is defined by the kind of judgment it exercises.
 
-1.  **👑 The Core (Strategy)**: (e.g., The Architect) Routes global context. Strictly prohibited from writing base-level code.
-2.  **👁️ The Senses (Intelligence)**: (e.g., Intelligence Officer) Scrapes market trends and external data. The sole vision entry point.
-3.  **🎭 The Soul (Aesthetics)**: (e.g., Chief Marketing Officer) Handles emotional anchoring, rhetoric audits, and UX design.
-4.  **🔨 The Hands (Execution)**: (e.g., Data Scientist) Executes purely within the boundaries established by the Core and Senses.
-5.  **🛡️ The Shield (Defense)**: (e.g., The Inquisitor) The internal auditor machine-gunning logical loopholes from the Senses. Zero data enters the memory core without surviving a consensus debate.
+1.  **👑 The Core**: The founding three, above the other pillars. They carry no evaluation label.
+2.  **🛡️ The Shield**: Auditing is their full-time job, not an exception: they review the overall risk that falls outside anyone else's remit.
+3.  **🔨 The Hands**: Engineering judgment is evaluation. Each sets her own standard for reliability, integrity, and compatibility instead of building to order.
+4.  **🎭 The Soul**: Aesthetic judgment is evaluation. Each is the final judge of her own visual language and stylistic consistency, not a finishing touch.
+5.  **👁️ The Senses**: How deeply and how accurately they see is itself evaluation: their eyes are the measure.
+
+The A1 definitions (2026-02), which separated strategy from execution, are preserved in the [v1.0 whitepaper snapshot](snapshots/v1.0-whitepaper.md). Full roster: [`architecture/ROSTER.md`](architecture/ROSTER.md).
 
 ## Architecture Blueprint
+
+> The A1-generation diagram (2026-02), kept as first published. The Empire generation is described in [`architecture/SYSTEM.md`](architecture/SYSTEM.md).
 
 ```mermaid
 graph TD
@@ -117,19 +121,19 @@ Continuous monitoring of cross-agent epistemic and rhetorical convergence. Even 
 
 ---
 
-## The A1 Expert Roster
+## The Expert Roster
 
-The system currently operates **39 active Human-in-the-Loop expert agents**, organized under the 5 Pillars:
+The system operates **39 Human-in-the-Loop expert agents** in the 5 Pillars. As of 2026-09-27, each is listed by her true name with a short public profile; portraits will follow.
 
 | Pillar | Agents | Examples |
 |--------|--------|---------|
-| 👑 The Core | 3 | 幕僚長 (Chief of Staff), 樞機師 (Architect), 星探 (People Officer) |
-| 🛡️ The Shield | 3 | 真理 (Inquisitor), 破壁者 (Security Auditor), 魔心師 |
-| 🔨 The Hands | 12 | 織法者 (Frontend), 守門人 (Database), 機械師 (DevOps), ... |
-| 🎭 The Soul | 6 | 光影師 (Visual), 操偶師 (Interaction), 幻畫師 (Illustration), ... |
-| 👁️ The Senses | 15 | 天機星 (Intelligence), 賢者 (Scientist), 戰略家 (Strategist), ... |
+| 👑 The Core | 3 | Rin 凜 (Chief of Staff), Yui 唯 (Architect), Ran 蘭 (People Officer) |
+| 🛡️ The Shield | 3 | Justitia 賈絲蒂夏 (Inquisitor), Nyx 倪克斯 (Security Auditor), Natalia 娜塔莉亞 |
+| 🔨 The Hands | 12 | Tsumugi 紬 (Frontend), Nova 諾娃 (Database), Terra 泰拉 (DevOps), ... |
+| 🎭 The Soul | 6 | Ariel 艾莉兒 (Visual), Iris 艾莉絲 (Interaction), Yume 夢 (Illustration), ... |
+| 👁️ The Senses | 15 | Moiré 摩爾 (Intelligence), Ethel 艾瑟兒 (Scientist), Kagami 鏡 (Thinker), ... |
 
-**Full roster with capabilities**: [`architecture/ROSTER.md`](architecture/ROSTER.md)
+**Full roster with profiles**: [`architecture/ROSTER.md`](architecture/ROSTER.md)
 
 **Flagship case study — The Inquisitor**: [`architecture/examples/inquisitor/`](architecture/examples/inquisitor/)
 
