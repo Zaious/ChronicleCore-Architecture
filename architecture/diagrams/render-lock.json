@@ -53,6 +53,26 @@
       "light": "c9bd1096119fe93af37ea9ea6d2e19763cea63daf323a2bf8c7fc1ccad4faae3",
       "dark": "6175d8f445107678956c264750b13cf3bfc91b973085c99f1ca0f1bfabc665dc",
       "light_png": "6875e82cba84d4afabbdd47b9c5f0244402f9339fc0c17ddd3bc53d3f5000e78"
+    },
+    "infrastructure-nodes": {
+      "table": {
+        "doc": "../INFRASTRUCTURE.md",
+        "heading": "## Node overview",
+        "title": "ChronicleCore Empire Infrastructure · Node overview (snapshot {snapshot})",
+        "footer": "go.chroniclecore.com/en/infra"
+      },
+      "table_src": "96b15c28d6d80c592608a85847bd94323d1c50f0d68dd2f7446ad579e3dba1a2",
+      "light_png": "93cb728ae0a2794c92f27379cc9398d0b5b2460721b8cfae71841099a00299d8"
+    },
+    "infrastructure-nodes_zh-TW": {
+      "table": {
+        "doc": "../INFRASTRUCTURE_zh-TW.md",
+        "heading": "## 節點總覽",
+        "title": "ChronicleCore 帝國基礎設施 · 節點總覽(快照 {snapshot})",
+        "footer": "go.chroniclecore.com/infra"
+      },
+      "table_src": "57903fea2c02618fb61e0972a38bdc9a6154a671a614662a1055f6ff9d91bcf0",
+      "light_png": "17f6aa5fb2629febef8ce5835c2b4d1088b86929112afc00cd69e7820f2ec46e"
     }
   }
 }

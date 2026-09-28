@@ -1,0 +1,14 @@
+{
+  "infrastructure-nodes_zh-TW": {
+    "doc": "../INFRASTRUCTURE_zh-TW.md",
+    "heading": "## 節點總覽",
+    "title": "ChronicleCore 帝國基礎設施 · 節點總覽(快照 {snapshot})",
+    "footer": "go.chroniclecore.com/infra"
+  },
+  "infrastructure-nodes": {
+    "doc": "../INFRASTRUCTURE.md",
+    "heading": "## Node overview",
+    "title": "ChronicleCore Empire Infrastructure · Node overview (snapshot {snapshot})",
+    "footer": "go.chroniclecore.com/en/infra"
+  }
+}
