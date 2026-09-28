@@ -1,0 +1,49 @@
+{
+  "kind": "forge-hardware",
+  "zh": {
+    "doc": "../INFRASTRUCTURE_zh-TW.md",
+    "facts": ["i5-12400", "MSI MPG Z690 FORCE WIFI", "64 GB DDR5-4800", "2× 32 GB", "分頁檔 112 GB", "175.7 GiB", "591.86", "CUDA 13.1", "190 W", "350 W", "420 W", "450 W", "UHD 730", "KC3000", "BarraCuda", "SkyHawk", "I225-V", "1 Gb/s", "Docker Desktop 29.6", "WSL2 2.6", "vLLM 0.30", "記憶體 24 GB", "swap 12 GB", "30–40 分鐘", "約 6 分鐘"],
+    "title": "Forge 鍛造廠 · 全硬體配置(快照 {snapshot})",
+    "board": "MSI MPG Z690 FORCE WIFI · Windows 11 Pro",
+    "rows": [
+      ["運算", [
+        [null, "Intel Core i5-12400", ["6 核 12 執行緒", "內顯 UHD 730(不接螢幕)"]],
+        [null, "記憶體 64 GB DDR5-4800", ["2× 32 GB", "分頁檔 112 GB(在 NVMe)· commit 上限 175.7 GiB", "WSL2 上限 24 GB · 8 執行緒 · swap 12 GB"]]
+      ]],
+      ["PCIe 4.0 · 兩卡各 ×8 · 驅動 591.86 / CUDA 13.1", [
+        ["gpu0", "GPU0 · RTX 3090 24 GB · 桌面卡", ["接雙螢幕", "功耗 190 W(預設 350 W,開機時壓低)", "只接生圖;夜班可分一半給 OCR"]],
+        ["gpu1", "GPU1 · RTX 3090 24 GB · 運算卡", ["不接螢幕", "功耗 420 W(上限 450 W)", "兩個 LLM 腦、OCR、生圖輪班"]]
+      ]],
+      ["儲存與網路", [
+        [null, "3× Seagate 2 TB HDD", ["兩顆 BarraCuda、一顆 SkyHawk", "資料 · 專案 · 模型正本"]],
+        [null, "Kingston KC3000 1 TB NVMe", ["系統 · 分頁檔", "Docker 原生卷(運轉用的模型權重)"]],
+        [null, "Intel I225-V 有線網卡", ["以 1 Gb/s 連線", "→ Tailscale 私網"]]
+      ]]
+    ],
+    "arrow_row": 2,
+    "foot": ["軟體:Docker Desktop 29.6(WSL2 2.6)· vLLM 0.30。", "模型正本從 HDD 複製進 NVMe 上的 Docker 原生卷,避開 WSL2 的 9P 掛載:冷啟動 30–40 分 → 約 6 分。"]
+  },
+  "en": {
+    "doc": "../INFRASTRUCTURE.md",
+    "facts": ["i5-12400", "MSI MPG Z690 FORCE WIFI", "64 GB DDR5-4800", "2× 32 GB", "112 GB page file", "175.7 GiB", "591.86", "CUDA 13.1", "190 W", "350 W", "420 W", "450 W", "UHD 730", "KC3000", "BarraCuda", "SkyHawk", "I225-V", "1 Gb/s", "Docker Desktop 29.6", "WSL2 2.6", "vLLM 0.30", "24 GB memory", "12 GB swap", "30–40 minutes", "about 6 minutes"],
+    "title": "Forge · full hardware configuration (snapshot {snapshot})",
+    "board": "MSI MPG Z690 FORCE WIFI · Windows 11 Pro",
+    "rows": [
+      ["Compute", [
+        [null, "Intel Core i5-12400", ["6 cores, 12 threads", "Integrated UHD 730 (no display attached)"]],
+        [null, "Memory 64 GB DDR5-4800", ["2× 32 GB", "112 GB page file (on NVMe) · commit limit 175.7 GiB", "WSL2 capped at 24 GB · 8 threads · 12 GB swap"]]
+      ]],
+      ["PCIe 4.0 · ×8 each · driver 591.86 / CUDA 13.1", [
+        ["gpu0", "GPU0 · RTX 3090 24 GB · display card", ["Drives two monitors", "190 W (default 350 W, lowered at boot)", "Image generation only; half for night-shift OCR"]],
+        ["gpu1", "GPU1 · RTX 3090 24 GB · compute card", ["No display attached", "420 W (maximum 450 W)", "Two LLM brains, OCR, and image generation in turns"]]
+      ]],
+      ["Storage and network", [
+        [null, "3× Seagate 2 TB HDD", ["Two BarraCuda, one SkyHawk", "Data · projects · model master copies"]],
+        [null, "Kingston KC3000 1 TB NVMe", ["System · page file", "Native Docker volumes (weights in use)"]],
+        [null, "Intel I225-V wired network", ["Linked at 1 Gb/s", "→ Tailscale private network"]]
+      ]]
+    ],
+    "arrow_row": 2,
+    "foot": ["Software: Docker Desktop 29.6 (WSL2 2.6) · vLLM 0.30.", "Model master copies are copied from the HDDs into native Docker volumes on the NVMe, avoiding WSL2's 9P mount: cold start 30–40 min → about 6 min."]
+  }
+}

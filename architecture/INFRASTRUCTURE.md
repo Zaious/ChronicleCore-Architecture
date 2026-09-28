@@ -297,6 +297,13 @@ Backups are end-to-end encrypted and kept on the Empire's own machines, not in a
 
 ## Chapter: the Forge's dual-GPU compute
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/forge-hardware.dark.svg">
+  <img alt="Forge full hardware configuration: on an MSI Z690 motherboard, an Intel Core i5-12400 with 64 GB of DDR5-4800 (112 GB page file, WSL2 capped at 24 GB); two RTX 3090 cards on PCIe 4.0 at x8 each, GPU0 the display card driving two monitors (190 W) and GPU1 the compute card (420 W); three 2 TB hard disks and a 1 TB NVMe drive, with model master copies copied from the hard disks into native Docker volumes on the NVMe; an Intel I225-V wired network card to the Tailscale private network." src="diagrams/forge-hardware.light.svg">
+</picture>
+
+<sub>Source data: [`diagrams/forge-hardware.draw.json`](diagrams/forge-hardware.draw.json)</sub>
+
 ### Hardware
 
 | Item | Specification (measured) |
@@ -408,7 +415,14 @@ This is carried out by four mechanisms:
 | Night-shift OCR (idle ≥ 30 min) | OCR on half the card; released the moment anyone touches the keyboard or mouse | OCR |
 | Gaming guard on | Game; any new work is blocked and a notification is sent | Unchanged |
 
-GPU0 takes image generation only; video, LLMs, and daytime OCR never run on GPU0. Image generation on GPU0 runs under three limits: pinned memory off, 7 GB of GPU memory reserved for the desktop, and power ≤ 190 W.
+GPU0 takes image generation only; video, LLMs, and daytime OCR never run on GPU0. Image generation on GPU0 runs under three limits: pinned memory off, 7 GB of GPU memory reserved for the desktop, and power ≤ 190 W. OCR reserves 85% of GPU memory on GPU1, and only 50% when the night shift uses GPU0.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/gpu-vram.dark.svg">
+  <img alt="GPU0 and GPU1 VRAM allocation and rotation (24 GB each): normally GPU0 holds only the desktop and GPU1 runs the automation brain (92%); while talking with the experts GPU1 switches to the conversation brain; images during a conversation move ComfyUI to GPU0 (7 GB kept for the desktop, up to about 17 GB for images); images alone give ComfyUI all of GPU1; new literature in the daytime runs OCR on GPU1 (85%); night-shift OCR takes 85% of GPU1 and 50% of GPU0; with the gaming guard on, GPU0 is left to the game." src="diagrams/gpu-vram.light.svg">
+</picture>
+
+<sub>Source data: [`diagrams/gpu-vram.draw.json`](diagrams/gpu-vram.draw.json)</sub>
 
 #### Example: pressing "start the conversation brain"
 

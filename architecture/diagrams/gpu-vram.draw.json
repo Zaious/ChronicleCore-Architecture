@@ -1,0 +1,42 @@
+{
+  "kind": "gpu-vram",
+  "total_gb": 24,
+  "zh": {
+    "doc": "../INFRASTRUCTURE_zh-TW.md",
+    "facts": ["0.92", "保留 7 GB 顯存給桌面", "190 W", "420 W", "3,551", "GPU1 圈 85%", "只圈 50%"],
+    "title": "GPU0 / GPU1 顯存分配與輪替(各 24 GB)",
+    "cards": ["GPU0 · 桌面卡 · 190 W", "GPU1 · 運算卡 · 420 W"],
+    "axis": "顯存(GB)",
+    "free": "空",
+    "legend": [["desk", "桌面"], ["auto", "自動化腦"], ["chat", "對話腦"], ["comfy", "生圖 ComfyUI"], ["ocr", "OCR"], ["game", "遊戲"]],
+    "note": ["色塊比例依設定值:vLLM 腦圈 92%、OCR 在 GPU1 圈 85%、在 GPU0 圈 50%;桌面約 3.5 GB 為實測;虛線=上限或依模型而定。"],
+    "rows": [
+      ["平常", ["預設"], [["desk", 3.5, "桌面", false]], [["auto", 22.08, "自動化腦 92%", false]]],
+      ["與專家對話", ["按「開對話腦」", "30 分鐘沒請求就換回"], [["desk", 3.5, "桌面", false]], [["chat", 22.08, "對話腦 92%", false]]],
+      ["對話中要生圖", ["ComfyUI 改到 GPU0", "佇列空 30 分鐘收班"], [["desk", 7, "桌面保留 7 GB", false], ["comfy", 17, "生圖 ≤ 17 GB", true]], [["chat", 22.08, "對話腦 92%", false]]],
+      ["單純生圖", ["自動化腦讓位", "佇列空 30 分鐘收班"], [["desk", 3.5, "桌面", false]], [["comfy", 24, "ComfyUI 獨佔(依模型)", true]]],
+      ["白天新文獻", ["每 15 分檢查", "跑完自動復航"], [["desk", 3.5, "桌面", false]], [["ocr", 20.4, "OCR 85%", false]]],
+      ["夜班 OCR", ["02:00 且閒置 ≥ 30 分", "一碰鍵盤滑鼠就讓出 GPU0"], [["desk", 3.5, "桌面", false], ["ocr", 12, "OCR 50%", false]], [["ocr", 20.4, "OCR 85%", false]]],
+      ["遊戲護欄開著", ["方舟一鍵", "GPU0 不准開新工作"], [["game", 24, "遊戲(新工作一律擋)", true]], [["auto", 22.08, "自動化腦 92%", false]]]
+    ]
+  },
+  "en": {
+    "doc": "../INFRASTRUCTURE.md",
+    "facts": ["0.92", "7 GB of GPU memory reserved for the desktop", "190 W", "420 W", "3,551", "85% of GPU memory on GPU1", "only 50%"],
+    "title": "GPU0 / GPU1 VRAM allocation and rotation (24 GB each)",
+    "cards": ["GPU0 · display card · 190 W", "GPU1 · compute card · 420 W"],
+    "axis": "VRAM (GB)",
+    "free": "free",
+    "legend": [["desk", "Desktop"], ["auto", "Automation brain"], ["chat", "Conversation brain"], ["comfy", "Images (ComfyUI)"], ["ocr", "OCR"], ["game", "Game"]],
+    "note": ["Block sizes follow configuration: vLLM brains reserve 92%; OCR reserves 85% on GPU1 and 50% on GPU0.", "About 3.5 GB for the desktop is measured. Dashed = upper bound or depends on the model."],
+    "rows": [
+      ["Normal", ["Default"], [["desk", 3.5, "Desktop", false]], [["auto", 22.08, "Automation brain 92%", false]]],
+      ["Talking with experts", ["On “start conversation brain”", "Back after 30 min without requests"], [["desk", 3.5, "Desktop", false]], [["chat", 22.08, "Conversation brain 92%", false]]],
+      ["Talking + images", ["ComfyUI moves to GPU0", "Closes after 30 min of empty queue"], [["desk", 7, "Desktop 7 GB", false], ["comfy", 17, "Images ≤ 17 GB", true]], [["chat", 22.08, "Conversation brain 92%", false]]],
+      ["Images only", ["Automation brain steps aside", "Closes after 30 min of empty queue"], [["desk", 3.5, "Desktop", false]], [["comfy", 24, "ComfyUI alone (depends on model)", true]]],
+      ["New literature (daytime)", ["Checked every 15 min", "Brain returns when done"], [["desk", 3.5, "Desktop", false]], [["ocr", 20.4, "OCR 85%", false]]],
+      ["Night-shift OCR", ["02:00 and idle ≥ 30 min", "Any key or mouse input frees GPU0"], [["desk", 3.5, "Desktop", false], ["ocr", 12, "OCR 50%", false]], [["ocr", 20.4, "OCR 85%", false]]],
+      ["Gaming guard on", ["One button in the Ark", "No new work on GPU0"], [["game", 24, "Game (new work blocked)", true]], [["auto", 22.08, "Automation brain 92%", false]]]
+    ]
+  }
+}

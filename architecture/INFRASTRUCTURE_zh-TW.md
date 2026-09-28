@@ -297,6 +297,13 @@
 
 ## 專章:Forge 的雙 GPU 算力
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/forge-hardware_zh-TW.dark.svg">
+  <img alt="Forge 全硬體配置:MSI Z690 主機板上,運算是 Intel Core i5-12400 與 64 GB DDR5-4800 記憶體(分頁檔 112 GB、WSL2 上限 24 GB);PCIe 4.0 上兩張 RTX 3090 各 ×8,GPU0 是接雙螢幕的桌面卡(190 W),GPU1 是運算卡(420 W);儲存是 3 顆 2 TB 硬碟與 1 TB NVMe,模型正本從硬碟複製進 NVMe 上的 Docker 原生卷;Intel I225-V 有線網卡接 Tailscale 私網。" src="diagrams/forge-hardware_zh-TW.light.svg">
+</picture>
+
+<sub>原始資料:[`diagrams/forge-hardware.draw.json`](diagrams/forge-hardware.draw.json)</sub>
+
 ### 硬體
 
 | 項目 | 規格(實測) |
@@ -408,7 +415,14 @@ vLLM 的顯存在啟動那一刻就圈定,之後即使閒置也不會吐回來�
 | 夜班 OCR(閒置 ≥ 30 分) | OCR 只用半張;有人一碰鍵盤滑鼠就立刻讓出 | OCR |
 | 遊戲護欄開著 | 遊戲;任何新工作一律擋下並推播 | 照常 |
 
-GPU0 只接生圖,影片、LLM 與白天的 OCR 一律不上 GPU0。在 GPU0 上生圖時帶三道限制:關閉 pinned memory、保留 7 GB 顯存給桌面、功耗 ≤ 190 W。
+GPU0 只接生圖,影片、LLM 與白天的 OCR 一律不上 GPU0。在 GPU0 上生圖時帶三道限制:關閉 pinned memory、保留 7 GB 顯存給桌面、功耗 ≤ 190 W。OCR 在 GPU1 圈 85% 顯存;夜班動用 GPU0 時只圈 50%。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/gpu-vram_zh-TW.dark.svg">
+  <img alt="GPU0 與 GPU1 的顯存分配與輪替(各 24 GB):平常 GPU0 只有桌面、GPU1 跑自動化腦(圈 92%);與專家對話時 GPU1 換成對話腦;對話中要生圖時 ComfyUI 移到 GPU0(桌面保留 7 GB,生圖最多約 17 GB);單純生圖時 ComfyUI 獨佔 GPU1;白天新文獻由 GPU1 跑 OCR(85%);夜班 OCR 時 GPU1 圈 85%、GPU0 圈 50%;遊戲護欄開著時 GPU0 讓給遊戲。" src="diagrams/gpu-vram_zh-TW.light.svg">
+</picture>
+
+<sub>原始資料:[`diagrams/gpu-vram.draw.json`](diagrams/gpu-vram.draw.json)</sub>
 
 #### 例:按下「開對話腦」
 

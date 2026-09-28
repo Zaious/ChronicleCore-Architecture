@@ -73,6 +73,38 @@
       },
       "table_src": "57903fea2c02618fb61e0972a38bdc9a6154a671a614662a1055f6ff9d91bcf0",
       "light_png": "17f6aa5fb2629febef8ce5835c2b4d1088b86929112afc00cd69e7820f2ec46e"
+    },
+    "forge-hardware_zh-TW": {
+      "drawing": "forge-hardware.draw.json",
+      "lang": "zh",
+      "data_src": "116d90ee8b3aa55b953282796a56b61c3dae06cbf3b627d799ce7c790d1e47e8",
+      "light": "60c75f290a2a6cb7d4b3ef993f0784db94607f81b361c40a59ddacb37b616ec8",
+      "dark": "8c264ed221c0dc2087e1013a0cb3b3791acec0b9ce6f73fb014d7f5ef6470bd7",
+      "light_png": "e7aa4c56e57a84e1e2ff18eaee2ed544573e71b6ac1ad5b676d8f25aeffa1a41"
+    },
+    "forge-hardware": {
+      "drawing": "forge-hardware.draw.json",
+      "lang": "en",
+      "data_src": "116d90ee8b3aa55b953282796a56b61c3dae06cbf3b627d799ce7c790d1e47e8",
+      "light": "7fcee8bf3260af3c24e16183ff7eda00d9872ebccc75802f7fa6bd581994af9d",
+      "dark": "405b9e250cbe2db89226a612b1d46a8b2134341b08979e99ca75c86ceab06457",
+      "light_png": "185d256fb89e0c10324c957e2370ff15197fb126328e7cc802ffe3eb63c66f49"
+    },
+    "gpu-vram_zh-TW": {
+      "drawing": "gpu-vram.draw.json",
+      "lang": "zh",
+      "data_src": "06dfe96f4d02024c460bc2c3565b725040c0cbc2c9ae8b0fefb474db17a1beff",
+      "light": "8dca4970b689831f4019385585ca2e5a4e135e2cc2cb11b0e04bb8d649a39a8a",
+      "dark": "6e74c89d77ad7b15d187681e6759eefac80673d6c8e0740f4fc54a8a501bd28e",
+      "light_png": "9eeba140806eac912edac453896d7807f5545f0a0ef457d72a37cefd598ddb5c"
+    },
+    "gpu-vram": {
+      "drawing": "gpu-vram.draw.json",
+      "lang": "en",
+      "data_src": "06dfe96f4d02024c460bc2c3565b725040c0cbc2c9ae8b0fefb474db17a1beff",
+      "light": "befb4c02287d9378fce3fad3aba9854a34c0ce4e240a79918f30bcceb2252848",
+      "dark": "7117b4365e39b5c2cf7bd112e5c3b0ffd093476dc9a0f18c0817c6f3004109d1",
+      "light_png": "9bc836de155d3efa5caee6e75792c7856d350229b30adfdbacf13e1932bd62a2"
     }
   }
 }

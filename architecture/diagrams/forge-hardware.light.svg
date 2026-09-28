@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 976 518" width="976" height="518" font-family="system-ui, &quot;Microsoft JhengHei&quot;, &quot;Noto Sans TC&quot;, sans-serif"><rect width="976" height="518" fill="#ffffff"/>
+<text x="24" y="44" font-size="19" font-weight="600" fill="#1f2328">Forge · full hardware configuration (snapshot 2026-09-26)</text>
+<rect x="24" y="64" width="928" height="404" rx="8" fill="#f6f8fa" stroke="#d1d9e0"/>
+<text x="40" y="87" font-size="14" font-weight="600" fill="#1f2328">MSI MPG Z690 FORCE WIFI · Windows 11 Pro</text>
+<text x="40" y="110" font-size="12.5" font-weight="600" fill="#59636e">Compute</text>
+<rect x="40.0" y="118" width="440.0" height="91" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="56.0" y="142" font-size="14.5" font-weight="600" fill="#1f2328">Intel Core i5-12400</text>
+<text x="56.0" y="164" font-size="13" fill="#59636e">6 cores, 12 threads</text>
+<text x="56.0" y="183" font-size="13" fill="#59636e">Integrated UHD 730 (no display attached)</text>
+<rect x="496.0" y="118" width="440.0" height="91" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="512.0" y="142" font-size="14.5" font-weight="600" fill="#1f2328">Memory 64 GB DDR5-4800</text>
+<text x="512.0" y="164" font-size="13" fill="#59636e">2× 32 GB</text>
+<text x="512.0" y="183" font-size="13" fill="#59636e">112 GB page file (on NVMe) · commit limit 175.7 GiB</text>
+<text x="512.0" y="202" font-size="13" fill="#59636e">WSL2 capped at 24 GB · 8 threads · 12 GB swap</text>
+<text x="40" y="239" font-size="12.5" font-weight="600" fill="#59636e">PCIe 4.0 · ×8 each · driver 591.86 / CUDA 13.1</text>
+<rect x="40.0" y="247" width="440.0" height="91" rx="6" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
+<rect x="40.0" y="247" width="6" height="91" rx="3" fill="#8c959f"/>
+<text x="56.0" y="271" font-size="14.5" font-weight="600" fill="#1f2328">GPU0 · RTX 3090 24 GB · display card</text>
+<text x="56.0" y="293" font-size="13" fill="#59636e">Drives two monitors</text>
+<text x="56.0" y="312" font-size="13" fill="#59636e">190 W (default 350 W, lowered at boot)</text>
+<text x="56.0" y="331" font-size="13" fill="#59636e">Image generation only; half for night-shift OCR</text>
+<rect x="496.0" y="247" width="440.0" height="91" rx="6" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+<rect x="496.0" y="247" width="6" height="91" rx="3" fill="#0969da"/>
+<text x="512.0" y="271" font-size="14.5" font-weight="600" fill="#1f2328">GPU1 · RTX 3090 24 GB · compute card</text>
+<text x="512.0" y="293" font-size="13" fill="#59636e">No display attached</text>
+<text x="512.0" y="312" font-size="13" fill="#59636e">420 W (maximum 450 W)</text>
+<text x="512.0" y="331" font-size="13" fill="#59636e">Two LLM brains, OCR, and image generation in turns</text>
+<text x="40" y="368" font-size="12.5" font-weight="600" fill="#59636e">Storage and network</text>
+<rect x="40.0" y="376" width="288.0" height="72" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="56.0" y="400" font-size="14.5" font-weight="600" fill="#1f2328">3× Seagate 2 TB HDD</text>
+<text x="56.0" y="422" font-size="13" fill="#59636e">Two BarraCuda, one SkyHawk</text>
+<text x="56.0" y="441" font-size="13" fill="#59636e">Data · projects · model master copies</text>
+<rect x="344.0" y="376" width="288.0" height="72" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="360.0" y="400" font-size="14.5" font-weight="600" fill="#1f2328">Kingston KC3000 1 TB NVMe</text>
+<text x="360.0" y="422" font-size="13" fill="#59636e">System · page file</text>
+<text x="360.0" y="441" font-size="13" fill="#59636e">Native Docker volumes (weights in use)</text>
+<rect x="648.0" y="376" width="288.0" height="72" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="664.0" y="400" font-size="14.5" font-weight="600" fill="#1f2328">Intel I225-V wired network</text>
+<text x="664.0" y="422" font-size="13" fill="#59636e">Linked at 1 Gb/s</text>
+<text x="664.0" y="441" font-size="13" fill="#59636e">→ Tailscale private network</text>
+<line x1="329.0" y1="412.0" x2="341.0" y2="412.0" stroke="#0969da" stroke-width="2"/>
+<path d="M 343.0 412.0 l -6 -4 v 8 z" fill="#0969da"/>
+<text x="24" y="482" font-size="12" fill="#59636e">Software: Docker Desktop 29.6 (WSL2 2.6) · vLLM 0.30.</text>
+<text x="24" y="499" font-size="12" fill="#59636e">Model master copies are copied from the HDDs into native Docker volumes on the NVMe, avoiding WSL2's 9P mount: cold start 30–40 min → about 6 min.</text>
+</svg>
