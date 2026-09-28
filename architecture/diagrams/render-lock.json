@@ -4,46 +4,55 @@
     "light": "github-light",
     "dark": "github-dark"
   },
+  "png": "light, 2x, Edge headless screenshot of the light SVG",
   "diagrams": {
     "gpu-chat-brain": {
       "mmd": "df2a288b64dbb9abd3c441386a8a18297a86ffdc58a38f3c426a8a959a1feceb",
       "light": "68df1bf50080c799bb5fbd38b02bda235db0aad87a9959066baddae05ab4cba0",
-      "dark": "176f3701f63c5c29cad458f1a42061ffd3265bae3050d0b95b1682155ea6b6f5"
+      "dark": "176f3701f63c5c29cad458f1a42061ffd3265bae3050d0b95b1682155ea6b6f5",
+      "light_png": "38369fdfdd988c00ee6b787b978599c850e27e93675240e5deabb3d58ad12c4d"
     },
     "gpu-chat-brain_zh-TW": {
       "mmd": "07283da896d402ab11f5ce644110a79b052bec012285dfcdc3b6a3d047a58bf8",
       "light": "cf897b1efdcb1936164fe5241f21d88c088df48191c11b78c43833290608552c",
-      "dark": "c45abc2e799c8339a8e9553b300361a2e07895dd74e2208223e27554fe4e8496"
+      "dark": "c45abc2e799c8339a8e9553b300361a2e07895dd74e2208223e27554fe4e8496",
+      "light_png": "3c5e1808f9be14b0cbb0e5b0d8b0224be7df40246a5ec17aabeb4fc94ea3b042"
     },
     "infrastructure-dataflow": {
       "mmd": "639b59fa5ccce295dc70fa5595455a3d3b2063906c644bf703edf222931a46fa",
       "light": "d801dfaf1daacdbf955699dba43e18d295d5ab4235766cf951a669ca8bada239",
-      "dark": "0fd8772f546d31ace88f205f3164c44676905e72d440dd486b4aa3eff5ab792e"
+      "dark": "0fd8772f546d31ace88f205f3164c44676905e72d440dd486b4aa3eff5ab792e",
+      "light_png": "2c8946b4bc6cf3ace0f8a1e107f95426e1e36286ad8b28ac69c5f12cdccb85ad"
     },
     "infrastructure-dataflow_zh-TW": {
       "mmd": "ae5f97141024c18c9143b06a37572c74b295334bb411d9010995a7e0f5a5e797",
       "light": "afbca9088777db0dab0af7cad6685f8983b009e65f071a2e76c7180225865791",
-      "dark": "781718d900d1c8eb65edefa457085f86eccb3c89fd86a2341adf5679909a7a15"
+      "dark": "781718d900d1c8eb65edefa457085f86eccb3c89fd86a2341adf5679909a7a15",
+      "light_png": "3434c6a1132da840fff8fb2180184483ebd87fd4d54994d03e27195d76691a60"
     },
     "infrastructure-network": {
       "mmd": "5f93b4937030bef07d5975a7cbf8ee1d7b4a43ef2afe1742430be1ec14fcc3a6",
       "light": "04313f03fdfbc93ccbe3b00df758181a90c2f0881bfe1b6741f7f0952ccf3743",
-      "dark": "86e5b2f1cb9ca3d3899c77d7e82f81a18b44a5a46d084abb9762572d78c99649"
+      "dark": "86e5b2f1cb9ca3d3899c77d7e82f81a18b44a5a46d084abb9762572d78c99649",
+      "light_png": "3f9918231e9e7b718cb2089572c279a5d815a82d33772849406f931393e86c80"
     },
     "infrastructure-network_zh-TW": {
       "mmd": "a548b6789553df3a434149817127a1f20db8561929856ad4abd0c91352ac5cf0",
       "light": "7f63e7d21e977b7dabd59426ccc95a61ce7a8b9c8c126c784da6d66e4c1fa6f0",
-      "dark": "c339ccc5a0ffcc4df78258799a13a18d0a4679352e711371ad3273d7fffaba5f"
+      "dark": "c339ccc5a0ffcc4df78258799a13a18d0a4679352e711371ad3273d7fffaba5f",
+      "light_png": "fcd600dd7e7618efa13da084b1d14b20c6f9de02e035ac6393374817f12d0cd6"
     },
     "system-overview": {
       "mmd": "178fa24e7550f1cae1ea2a42327f6c5eacf532d962b6238814b95ce8a5f204ff",
       "light": "aa7305011ef955c8d83efeebf315079885240cc535ae64ba59d20dd115b64848",
-      "dark": "65e05b5cc93d41e684421db6d380013c5ab7aafa5053bfa3a63ef1ed2530f61b"
+      "dark": "65e05b5cc93d41e684421db6d380013c5ab7aafa5053bfa3a63ef1ed2530f61b",
+      "light_png": "28564187c129fc2efd3f869e24ad7aa563441ded97cff5a3e5b75871b360d523"
     },
     "system-overview_zh-TW": {
       "mmd": "1ce7df051dd52beff67fb9c38940d333a9fda47630963ce175b9a8ede6ccea3c",
       "light": "c9bd1096119fe93af37ea9ea6d2e19763cea63daf323a2bf8c7fc1ccad4faae3",
-      "dark": "6175d8f445107678956c264750b13cf3bfc91b973085c99f1ca0f1bfabc665dc"
+      "dark": "6175d8f445107678956c264750b13cf3bfc91b973085c99f1ca0f1bfabc665dc",
+      "light_png": "6875e82cba84d4afabbdd47b9c5f0244402f9339fc0c17ddd3bc53d3f5000e78"
     }
   }
 }
