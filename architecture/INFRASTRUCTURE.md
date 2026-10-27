@@ -25,7 +25,7 @@ It is built entirely from consumer hardware and one retired laptop, with no rent
 
 ---
 
-## Build timeline (2026-07 → 2026-09)
+## Build timeline (2026-07 → 2026-10)
 
 | Date | Event | Evidence |
 |---|---|---|
@@ -49,6 +49,7 @@ It is built entirely from consumer hardware and one retired laptop, with no rent
 | 2026-09-16 / 19 / 24 | Signed releases `law-v2` / `law-v3` / `law-v4` | Signed Git tags |
 | 2026-09-24 | Two brains: an automation brain and a conversation brain | Decision record D-VLLM-AUTO-01 |
 | 2026-09-25 | **Settled**: on-demand GPU placement, automatic OCR runs, a GPU0 gaming guard | Decision record D-GPU0-GAME-01 |
+| 2026-10-21 | Forge upgrade (after the snapshot date): memory from 64 GB to 96 GB (2× 48 GB DDR5-5600); a new 2 TB NVMe drive now holds the empire's data, which used to live on a hard disk. Every other specification in this document is still the 2026-09-26 snapshot | Read back from the machine on 2026-10-27 |
 
 ### Twelve weeks of commits (as of 2026-09-26)
 
@@ -472,6 +473,7 @@ Each limit above corresponds to a real incident:
 - The Watchdog sits behind the home network and cannot reach the Outpost's public service layer, so for now it can only confirm that the Outpost machine and its tailnet connection are alive.
 - The Sanctum has only 16 GB of memory, which will become a bottleneck as the vector store grows.
 - The two brains cannot run at the same time, for two reasons. The first is GPU memory: GPU0 is kept for the desktop and image generation, so both brains can only live on GPU1. The second is host memory: the Forge has only 64 GB (2× 32 GB), and whatever GPU memory each brain uses inside WSL (about 23 GB) is charged again, in equal measure, against the host's commit. On 2026-09-22, for a vLLM load spanning both cards, the start gate estimated a commit peak of 140.1 GiB, 12.4 GiB over the limit of 127.7 GiB at the time. So while the Sovereign is in a conversation the automation brain is away, and night-shift work that needs the local model waits for it to come back.
+  - **Added 2026-10-21**: memory is now 96 GB (commit limit 207.7 GiB), which gives the second reason more headroom, but the peak of running both brains at once has not been measured again, so whether it still applies is unverified. The first reason, GPU memory, still stands, so the two brains still do not run at the same time.
 
 ---
 
